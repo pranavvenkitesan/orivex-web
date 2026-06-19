@@ -1,0 +1,3079 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+
+    <!-- Meta Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page Title -->
+    <title>Orivex - Personal Portfolio HTML Template</title>
+
+    <!-- Meta Tags -->
+    <meta
+      name="description"
+      content="Personal portfolio showcasing my work, services, and projects. Creative professional with expertise in design and development. View my experience, skills, and get in touch."
+    />
+    <meta
+      name="keywords"
+      content="personal portfolio, creative portfolio, web design, graphic design, freelancer, projects, services, about me, contact"
+    />
+    <meta name="author" content="CodePower" />
+
+    <!-- Browser Color -->
+    <meta
+      name="theme-color"
+      content="#f3f3f7"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0d0d0f"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/branding/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="images/branding/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="images/branding/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/branding/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="images/branding/favicon/site.webmanifest" />
+
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <!-- Font Awesome Css-->
+    <link href="css/all.min.css" rel="stylesheet" media="screen" />
+    <!-- Swiper Css-->
+    <link href="css/swiper-bundle.css" rel="stylesheet" media="screen" />
+    <!-- Magnific Popup Css-->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/theme-switcher.css" />
+  </head>
+
+  <body>
+    <!--
+      ==========================================================================
+      Home Page Structure
+      1) Accessibility Helpers
+      2) Global Header / Navigation
+      3) Main Content:
+      - Hero
+      - About
+      - Scrolling Ticker
+      - Services
+      - Projects
+      - Video
+      - Awards
+      - Testimonials
+      - Clients
+      - FAQ
+      - Blog
+      4) Global Footer
+      5) Utilities (Back to Top)
+      6) Vendor & Custom Scripts
+      ==========================================================================
+    -->
+
+    <!-- Preloader Start -->
+    <div
+      id="preloader"
+      class="preloader"
+      role="status"
+      aria-live="polite"
+      aria-busy="true"
+    >
+      <span class="visually-hidden">Loading, please wait</span>
+
+      <div class="preloader__spinner" aria-hidden="true">
+        <span class="preloader__dot"></span>
+        <span class="preloader__dot"></span>
+        <span class="preloader__dot"></span>
+      </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Skip content -->
+    <a href="#main-content" class="visually-hidden">Skip to main content</a>
+
+    <!-- Dot follower -->
+    <div class="follow-dot" aria-hidden="true"></div>
+
+    <!-- ===================================================== -->
+    <!-- Header Section -->
+    <!-- Description: Main navigation header with logo, menu, theme switcher, and CTA -->
+    <!-- Features: Responsive navbar, dropdown menus, mobile menu system, theme toggle -->
+    <!-- Includes: Accessibility support (ARIA), mobile overlay system, submenu controls -->
+    <!-- ===================================================== -->
+
+    <!-- Header Start -->
+    <header class="header-container">
+      <!-- ===================================================== -->
+      <!-- Navigation Wrapper -->
+      <!-- ===================================================== -->
+      <nav class="header-nav" aria-label="Main navigation">
+        <!-- ===================================================== -->
+        <!-- Logo Start -->
+        <!-- ===================================================== -->
+        <a href="index.html" aria-label="Orivex Homepage">
+          <img
+            src="images/branding/logo/logo-main.png"
+            data-light-src="images/branding/logo/logo-main.png"
+            data-dark-src="images/branding/logo/logo-light.png"
+            alt="Orivex Logo"
+            class="header-nav__logo"
+          />
+        </a>
+        <!-- Logo End -->
+
+        <!-- ===================================================== -->
+        <!-- Navigation Menu Container (Desktop + Mobile) -->
+        <!-- ===================================================== -->
+        <div
+          id="menu-container"
+          class="header-nav__menu-wrapper"
+          role="navigation"
+          data-lenis-prevent="true"
+          tabindex="-1"
+          aria-label="Mobile navigation"
+          inert
+        >
+          <!-- ===================================================== -->
+          <!-- Mobile Header (Logo + Close Button) -->
+          <!-- ===================================================== -->
+          <div class="header-nav__mobile-header">
+            <img
+              src="images/branding/logo/logo-main.png"
+              data-light-src="images/branding/logo/logo-main.png"
+              data-dark-src="images/branding/logo/logo-light.png"
+              alt="Orivex Logo"
+              class="header-nav__logo--mobile"
+            />
+
+            <!-- Close Mobile Menu -->
+            <button
+              id="close-menu-button"
+              class="btn btn--outline navbar__menu-button"
+              type="button"
+              aria-label="Close menu"
+              aria-controls="menu-container"
+            >
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </div>
+          <!-- Mobile Header End -->
+
+          <!-- ===================================================== -->
+          <!-- Primary Navigation Menu -->
+          <!-- ===================================================== -->
+          <ul class="header-nav__menu">
+            <!-- ========================= -->
+            <!-- Home Dropdown -->
+            <!-- ========================= -->
+            <li class="navbar__menu-item">
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="submenu-home"
+                data-submenu-toggle
+              >
+                Home
+                <i
+                  class="fa-solid fa-plus header-nav__menu-icon"
+                  aria-hidden="true"
+                ></i>
+              </button>
+
+              <ul
+                id="submenu-home"
+                class="header-nav__submenu"
+                aria-label="Home submenu"
+              >
+                <li><a href="index.html">Web Designer</a></li>
+                <li>
+                  <a href="index-creative-developer.html">Creative Developer</a>
+                </li>
+                <li>
+                  <a href="index-personal-portfolio.html">Personal Portfolio</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- About Link -->
+            <li class="navbar__menu-item">
+              <a href="about.html">About</a>
+            </li>
+
+            <!-- ========================= -->
+            <!-- Services Dropdown -->
+            <!-- ========================= -->
+            <li class="navbar__menu-item">
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="submenu-services"
+                data-submenu-toggle
+              >
+                Services
+                <i
+                  class="fa-solid fa-plus header-nav__menu-icon"
+                  aria-hidden="true"
+                ></i>
+              </button>
+
+              <ul
+                id="submenu-services"
+                class="header-nav__submenu"
+                aria-label="Services submenu"
+              >
+                <li><a href="services-list.html">Services List</a></li>
+                <li><a href="service-details.html">Service Details</a></li>
+              </ul>
+            </li>
+
+            <!-- ========================= -->
+            <!-- Pages Dropdown -->
+            <!-- ========================= -->
+            <li class="navbar__menu-item">
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="submenu-pages"
+                data-submenu-toggle
+              >
+                Pages
+                <i
+                  class="fa-solid fa-plus header-nav__menu-icon"
+                  aria-hidden="true"
+                ></i>
+              </button>
+
+              <ul
+                id="submenu-pages"
+                class="header-nav__submenu"
+                aria-label="Pages submenu"
+              >
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="project-details.html">Project Details</a></li>
+                <li><a href="blog-list.html">Blog List</a></li>
+                <li><a href="blog-details.html">Blog Details</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="404.html">404</a></li>
+              </ul>
+            </li>
+
+            <!-- Contact Link -->
+            <li class="navbar__menu-item">
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- ===================================================== -->
+          <!-- Mobile Extra Info Section -->
+          <!-- ===================================================== -->
+          <div class="header-nav__social-wrapper--mobile">
+            <!-- Contact Info -->
+            <div class="navbar__mobile-contact">
+              <p class="navbar__section-label">Get in Touch</p>
+
+              <div class="navbar__address">
+                <p>USA, California - 90210 Str. Sunset Boulevard 45</p>
+              </div>
+
+              <div class="navbar__phone">
+                <a class="link" href="tel:+1234567890">+1 234 567 890</a>
+              </div>
+
+              <div class="navbar__email">
+                <a class="link" href="mailto:Orivex@mail.com"
+                  >Orivex@mail.com</a
+                >
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <p class="navbar__section-label">Let's Connect</p>
+
+            <div class="navbar__mobile-social-container">
+              <a
+                href="#"
+                class="btn btn--social"
+                aria-label="Visit our Facebook page"
+              >
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="#"
+                class="btn btn--social"
+                aria-label="Visit our Twitter Profile"
+              >
+                <i class="fab fa-x-twitter" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="#"
+                class="btn btn--social"
+                aria-label="Visit our LinkedIn Profile"
+              >
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="#"
+                class="btn btn--social"
+                aria-label="Visit our Instagram Profile"
+              >
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================== -->
+        <!-- CTA Section -->
+        <!-- ===================================================== -->
+        <div class="header-nav__cta">
+          <!-- Theme Switcher Button -->
+          <button
+            id="theme-switcher-btn"
+            class="theme-switcher"
+            type="button"
+            aria-label="Toggle dark/light theme"
+            aria-pressed="false"
+          >
+            <span class="theme-switcher__icon theme-switcher__icon--light">
+              <i class="fa-solid fa-sun"></i>
+            </span>
+            <span class="theme-switcher__icon theme-switcher__icon--dark">
+              <i class="fa-solid fa-moon"></i>
+            </span>
+          </button>
+
+          <!-- Theme State Inputs -->
+          <input
+            type="radio"
+            id="theme-switcher-light"
+            name="theme"
+            value="light"
+            hidden
+          />
+          <input
+            type="radio"
+            id="theme-switcher-dark"
+            name="theme"
+            value="dark"
+            hidden
+          />
+
+          <!-- Open Menu Button -->
+          <button
+            id="open-menu-button"
+            class="btn btn--outline navbar__menu-button"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="menu-container"
+          >
+            <i class="fa-solid fa-bars-staggered" aria-hidden="true"></i>
+          </button>
+        </div>
+        <!-- CTA End -->
+
+        <!-- Overlay -->
+        <div id="overlay" class="header-nav__overlay" role="presentation"></div>
+      </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- ===================================================== -->
+    <!-- End Header Section -->
+    <!-- ===================================================== -->
+
+    <main id="main-content">
+      <!-- ===================================================== -->
+      <!-- Hero Section Start -->
+      <!-- Main introduction area with identity, headline, and CTA -->
+      <!-- ===================================================== -->
+      <section class="hero">
+        <!-- Container: Hero Layout Wrapper -->
+        <div class="container pt-0 pb-0">
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Hero Content Wrapper -->
+              <div class="hero__content">
+                <!-- Decorative / UI Styled Wrapper (Window-like Layout) -->
+                <div class="hero__design-wrapper">
+                  <!-- Top Bar: Window Controls + Availability Status -->
+                  <div class="hero__design-top">
+                    <!-- Fake Window Controls (UI Decoration) -->
+                    <div class="hero__window-controls">
+                      <span
+                        class="hero__window-dot hero__window-dot--close"
+                      ></span>
+                      <span
+                        class="hero__window-dot hero__window-dot--minimize"
+                      ></span>
+                      <span
+                        class="hero__window-dot hero__window-dot--maximize"
+                      ></span>
+                    </div>
+
+                    <!-- Availability Status Label -->
+                    <div class="meta-label">
+                      <span
+                        class="meta-label__dot meta-label__dot--brand"
+                      ></span>
+                      <span class="meta-label__text"
+                        >Available for Freelance</span
+                      >
+                    </div>
+                  </div>
+                  <!-- /Top Bar -->
+
+                  <!-- Main Hero Content Area -->
+                  <div class="hero__design-main">
+                    <!-- ===================== -->
+                    <!-- Hero Title Section -->
+                    <!-- ===================== -->
+                    <div class="hero__design-row hero__design-row--services">
+                      <div class="hero__design-cell">
+                        <h1 class="hero__name">Daniel Whitaker</h1>
+                      </div>
+                    </div>
+
+                    <!-- ===================== -->
+                    <!-- Job Title + Description -->
+                    <!-- ===================== -->
+                    <div class="hero__design-row hero__design-row--services">
+                      <!-- Decorative Separator -->
+                      <div class="page-header__separator"></div>
+
+                      <!-- Job Title & Description -->
+                      <div class="hero__job-wrap">
+                        <!-- Job Title -->
+                        <p class="hero__job">
+                          Your
+                          <span class="hero__job-highlight"> Web Designer</span>
+                        </p>
+
+                        <!-- Short Description -->
+                        <p class="hero__description">
+                          <span class="hero__description-primary">
+                            I create visually stunning and user-friendly
+                            websites &mdash; that help businesses
+                          </span>
+                          <span class="hero__description-accent">
+                            establish a strong
+                          </span>
+                          online presence and achieve their goals.
+                        </p>
+                      </div>
+
+                      <!-- Decorative Separator -->
+                      <div class="page-header__separator"></div>
+                    </div>
+
+                    <!-- ===================== -->
+                    <!-- Identity Section (3 Columns Layout) -->
+                    <!-- ===================== -->
+                    <div class="hero__design-row hero__design-row--identity">
+                      <!-- Left Column: Location + CTA -->
+                      <div
+                        class="hero__design-cell hero__design-cell--name-left"
+                      >
+                        <div class="hero__design-left-meta">
+                          <!-- Location Info -->
+                          <div class="hero__design-left-meta-row">
+                            <img
+                              class="hero__design-left-meta-icon"
+                              src="images/hero/decor/hero-shape-02.svg"
+                              alt=""
+                              aria-hidden="true"
+                            />
+                            <div class="hero__design-location">
+                              <span
+                                class="hero__design-top-right-item hero__design-top-right-item--meta"
+                              >
+                                Currently Based in
+                              </span>
+                              <span
+                                class="hero__design-top-right-item hero__design-top-right-item--city"
+                              >
+                                New York
+                              </span>
+                            </div>
+                          </div>
+
+                          <!-- Call-To-Action Button -->
+                          <a
+                            class="btn btn--outline hero__design-left-meta-btn"
+                            href="contact.html"
+                          >
+                            Book a Call
+                          </a>
+                        </div>
+                      </div>
+
+                      <!-- Center Column: Profile Image -->
+                      <div class="hero__design-cell hero__design-cell--photo">
+                        <div class="hero__profile-picture">
+                          <img
+                            src="images/hero/portraits/profile-picture.jpg"
+                            alt="Daniel Whitaker Profile Picture"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Right Column: Skills / Services List -->
+                      <div
+                        class="hero__design-cell hero__design-cell--name-right"
+                      >
+                        <div class="hero__design-top-right">
+                          <!-- Decorative Shape -->
+                          <img
+                            class="hero__design-top-right-img"
+                            src="images/hero/decor/hero-shape-01.svg"
+                            alt=""
+                            aria-hidden="true"
+                          />
+
+                          <!-- Skills / Expertise List -->
+                          <div class="hero__design-top-right-list">
+                            <span class="hero__design-top-right-item">
+                              <span class="hero__design-top-right-prefix"
+                                >//</span
+                              >
+                              On-Page SEO
+                            </span>
+                            <span class="hero__design-top-right-item">
+                              <span class="hero__design-top-right-prefix"
+                                >//</span
+                              >
+                              Accessibility
+                            </span>
+                            <span class="hero__design-top-right-item">
+                              <span class="hero__design-top-right-prefix"
+                                >//</span
+                              >
+                              UX Optimization
+                            </span>
+                            <span class="hero__design-top-right-item">
+                              <span class="hero__design-top-right-prefix"
+                                >//</span
+                              >
+                              Landing Pages
+                            </span>
+                            <span class="hero__design-top-right-item">
+                              <span class="hero__design-top-right-prefix"
+                                >//</span
+                              >
+                              UI Design
+                            </span>
+                            <span class="hero__design-top-right-item">
+                              <span class="hero__design-top-right-prefix"
+                                >//</span
+                              >
+                              Design Systems
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /Identity Section -->
+                  </div>
+                  <!-- /Main Hero Content -->
+                </div>
+                <!-- /Design Wrapper -->
+              </div>
+              <!-- /Hero Content -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===================================================== -->
+      <!-- Hero Section End -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- About Section -->
+      <!-- Description: Displays experience, process, and key stats -->
+      <!-- Features: Section title, animated numbers, descriptive text -->
+      <!-- Customize: Title, stats, descriptions, and icons -->
+      <!-- ===================================================== -->
+
+      <section class="about">
+        <!-- Container Start -->
+        <div class="container">
+          <div class="row">
+            <!-- ===================================== -->
+            <!-- Left Column: Section Heading -->
+            <!-- ===================================== -->
+            <div class="col-lg-6 about__col-0">
+              <div class="about__col-1">
+                <!-- Section Title Block -->
+                <div class="section-title">
+                  <!-- Pre-title (Small Label + Icon) -->
+                  <div class="pre-title">
+                    <!-- Icon -->
+                    <!-- Replace icon in: /images/branding/badges/ -->
+                    <div class="pre-title__icon-wrap">
+                      <img
+                        class="pre-title__icon"
+                        src="images/branding/badges/title-shape-dark.svg"
+                        data-light-src="images/branding/badges/title-shape-dark.svg"
+                        data-dark-src="images/branding/badges/title-shape-light.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </div>
+
+                    <!-- Label Text -->
+                    <!-- You can change this text -->
+                    <span class="pre-title__label">About Your Partner</span>
+                  </div>
+
+                  <!-- Main Title -->
+                  <!-- Editable Content Start -->
+                  <h2>
+                    <span class="cp-gray--modern">How the</span>
+                    Experience Works
+                    <span class="cp-brand-color">.</span>
+                  </h2>
+                  <!-- Editable Content End -->
+                </div>
+                <!-- /Section Title Block -->
+              </div>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Right Column: Experience & Stats -->
+            <!-- ===================================== -->
+            <div class="col-lg-6">
+              <div class="about__col-2">
+                <!-- ============================== -->
+                <!-- Row 1: Stat + Description -->
+                <!-- ============================== -->
+                <div class="about__numbers">
+                  <!-- Stat Item 01 -->
+                  <div class="about__numbers-item">
+                    <!-- Step Label -->
+                    <p class="about__numbers-label">_01</p>
+
+                    <div class="about__number-content">
+                      <!-- Number -->
+                      <!-- You can change the number value -->
+                      <div>30<span>+</span></div>
+
+                      <!-- Description -->
+                      <p>
+                        Working across diverse industries to design meaningful,
+                        effective digital experiences.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Supporting Text -->
+                  <div class="about__text-item">
+                    <p>
+                      I focus on user-centered design, combining aesthetics with
+                      functionality to create websites that engage users and
+                      drive results.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ============================== -->
+                <!-- Row 2: Two Stats -->
+                <!-- ============================== -->
+                <div class="about__numbers">
+                  <!-- Stat Item 02 -->
+                  <div class="about__numbers-item">
+                    <p class="about__numbers-label">_02</p>
+
+                    <div class="about__number-content">
+                      <div>400<span>+</span></div>
+                      <p>
+                        Building lasting relationships through thoughtful design
+                        clients truly enjoy.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Stat Item 03 -->
+                  <div class="about__numbers-item">
+                    <p class="about__numbers-label">_03</p>
+
+                    <div class="about__number-content">
+                      <div>15<span>+</span></div>
+                      <p>
+                        Years of hands-on experience crafting impactful designs
+                        across multiple digital domains.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ============================== -->
+                <!-- Row 3: Text + Stat -->
+                <!-- ============================== -->
+                <div class="about__numbers">
+                  <!-- Supporting Text -->
+                  <div class="about__text-item">
+                    <p>
+                      Timelines vary by project complexity, but typically range
+                      from 2–8 weeks. I provide detailed milestones and regular
+                      updates throughout.
+                    </p>
+                  </div>
+
+                  <!-- Stat Item 04 -->
+                  <div class="about__numbers-item">
+                    <p class="about__numbers-label">_04</p>
+
+                    <div class="about__number-content">
+                      <div>10<span>+</span></div>
+                      <p>
+                        Delivering scalable design solutions for brands across
+                        markets and cultures.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Right Column Content -->
+            </div>
+            <!-- /Right Column -->
+          </div>
+        </div>
+        <!-- /Container -->
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- End About Section -->
+      <!-- ===================================================== -->
+
+      <!-- Scrolling Text Section Start -->
+      <section class="scrolling-text" aria-label="Featured Services">
+        <h2 class="visually-hidden">Featured Services</h2>
+        <div class="scrolling-text__container" role="region" aria-live="off">
+          <div class="scrolling-text__content">
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              Responsive Design
+            </span>
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              User Experience
+            </span>
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              Frontend Development
+            </span>
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              Backend Development
+            </span>
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              Performance Optimization
+            </span>
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              SEO & Accessibility
+            </span>
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              Security & Maintenance
+            </span>
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              Growth & Analytics
+            </span>
+          </div>
+          <div class="scrolling-text__content">
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              Responsive Design
+            </span>
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              User Experience
+            </span>
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              Frontend Development
+            </span>
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              Backend Development
+            </span>
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              Performance Optimization
+            </span>
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              SEO & Accessibility
+            </span>
+            <div>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              Security & Maintenance
+            </div>
+            <span>
+              <span class="scrolling-text__separator-wrapper">
+                <span class="scrolling-text__icon"
+                  ><i class="fa-solid fa-angles-right"></i
+                ></span>
+              </span>
+              Growth & Analytics
+            </span>
+          </div>
+        </div>
+      </section>
+      <!-- Scrolling Ticker Section End -->
+
+      <!-- ===================================================== -->
+      <!-- Services Section -->
+      <!-- Description: Displays list of services with images and sub-features -->
+      <!-- Features: Numbered items, hover-ready layout, service details links -->
+      <!-- Customize: Titles, images, sub-services, and links -->
+      <!-- ===================================================== -->
+
+      <section class="services">
+        <!-- Container Start -->
+        <div class="container">
+          <!-- ===================================== -->
+          <!-- Section Header -->
+          <!-- ===================================== -->
+          <div class="row">
+            <!-- Pre-title Column -->
+            <div class="col-lg-4">
+              <!-- Pre-title -->
+              <div class="pre-title">
+                <!-- Icon -->
+                <!-- Replace icon in: /images/branding/badges/ -->
+                <div class="pre-title__icon-wrap">
+                  <img
+                    class="pre-title__icon"
+                    src="images/branding/badges/title-shape-dark.svg"
+                    data-light-src="images/branding/badges/title-shape-dark.svg"
+                    data-dark-src="images/branding/badges/title-shape-light.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+
+                <!-- Label -->
+                <!-- Editable Text -->
+                <span class="pre-title__label">How I Help</span>
+              </div>
+            </div>
+
+            <!-- Title Column -->
+            <div class="col-lg-8">
+              <!-- Section Title -->
+              <!-- Editable Content Start -->
+              <div class="section-title">
+                <h2>
+                  <span class="cp-gray--modern">Turning Your</span>
+                  Ideas Into Results-Driven Websites
+                  <span class="cp-brand-color">.</span>
+                </h2>
+              </div>
+              <!-- Editable Content End -->
+            </div>
+          </div>
+
+          <!-- ===================================== -->
+          <!-- Services List -->
+          <!-- ===================================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Services Wrapper -->
+              <div class="services__wrapper">
+                <!-- ===================================================== -->
+                <!-- Service Item 01 -->
+                <!-- Customize: Title, image, list items, and link -->
+                <!-- ===================================================== -->
+                <div class="service__item">
+                  <div class="row align-items-center">
+                    <!-- Service Number -->
+                    <div class="col-lg-2">
+                      <div class="service__item-number">1.</div>
+                    </div>
+
+                    <!-- Service Content -->
+                    <div class="col-lg-8">
+                      <div class="service__item-content">
+                        <!-- Service Title -->
+                        <h3 class="service__item-title">UI / UX Design</h3>
+
+                        <!-- Service Details Wrapper -->
+                        <div class="services__sub-wrapper">
+                          <!-- Service Image -->
+                          <!-- Replace image in: /images/sections/services/ -->
+                          <img
+                            class="service__item-img"
+                            src="images/sections/services/service-img-01.jpg"
+                            alt="UI / UX Design"
+                            loading="lazy"
+                            decoding="async"
+                          />
+
+                          <!-- Sub Services List -->
+                          <ul class="service__sub-service">
+                            <li>User Research</li>
+                            <li>Wireframing & Prototyping</li>
+                            <li>Interface Design (UI)</li>
+                            <li>Usability Testing</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Service Link -->
+                    <div class="col-lg-2">
+                      <div class="service__item-icon">
+                        <!-- Link to Service Details Page -->
+                        <!-- Update href to match your page -->
+                        <a
+                          href="service-details.html"
+                          aria-label="View UI / UX Design service details"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Service Item 02 -->
+                <!-- ===================================================== -->
+                <div class="service__item">
+                  <div class="row align-items-center">
+                    <div class="col-lg-2">
+                      <div class="service__item-number">2.</div>
+                    </div>
+
+                    <div class="col-lg-8">
+                      <div class="service__item-content">
+                        <h3 class="service__item-title">Landing Page Design</h3>
+
+                        <div class="services__sub-wrapper">
+                          <!-- Replace image -->
+                          <img
+                            class="service__item-img"
+                            src="images/sections/services/service-img-02.jpg"
+                            alt="Landing Page Design"
+                            loading="lazy"
+                            decoding="async"
+                          />
+
+                          <ul class="service__sub-service">
+                            <li>Conversion-Focused Layouts</li>
+                            <li>Visual Storytelling</li>
+                            <li>Copy-Design Alignment</li>
+                            <li>A/B-Ready Design</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="service__item-icon">
+                        <a
+                          href="service-details.html"
+                          aria-label="View Landing Page Design service details"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Service Item 03 -->
+                <!-- ===================================================== -->
+                <div class="service__item">
+                  <div class="row align-items-center">
+                    <div class="col-lg-2">
+                      <div class="service__item-number">3.</div>
+                    </div>
+
+                    <div class="col-lg-8">
+                      <div class="service__item-content">
+                        <h3 class="service__item-title">
+                          Website Redesign & Improvements
+                        </h3>
+
+                        <div class="services__sub-wrapper">
+                          <img
+                            class="service__item-img"
+                            src="images/sections/services/service-img-03.jpg"
+                            alt="Website Redesign & Improvements"
+                            loading="lazy"
+                            decoding="async"
+                          />
+
+                          <ul class="service__sub-service">
+                            <li>UX & UI Audit</li>
+                            <li>Information Architecture</li>
+                            <li>Visual Refresh</li>
+                            <li>Mobile & Accessibility Improvements</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="service__item-icon">
+                        <a
+                          href="service-details.html"
+                          aria-label="View Website Redesign & Improvements service details"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Service Item 04 -->
+                <!-- ===================================================== -->
+                <div class="service__item">
+                  <div class="row align-items-center">
+                    <div class="col-lg-2">
+                      <div class="service__item-number">4.</div>
+                    </div>
+
+                    <div class="col-lg-8">
+                      <div class="service__item-content">
+                        <h3 class="service__item-title">
+                          Website Optimization
+                        </h3>
+
+                        <div class="services__sub-wrapper">
+                          <img
+                            class="service__item-img"
+                            src="images/sections/services/service-img-04.jpg"
+                            alt="Website Optimization"
+                            loading="lazy"
+                            decoding="async"
+                          />
+
+                          <ul class="service__sub-service">
+                            <li>Performance Optimization</li>
+                            <li>Conversion Rate Optimization (CRO)</li>
+                            <li>UX Friction Reduction</li>
+                            <li>SEO-Friendly Design Improvements</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="service__item-icon">
+                        <a
+                          href="service-details.html"
+                          aria-label="View Website Optimization service details"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Services Wrapper -->
+            </div>
+          </div>
+        </div>
+        <!-- /Container -->
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- End Services Section -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- Projects Section -->
+      <!-- Description: Displays portfolio projects with images, tags, and links -->
+      <!-- Features: Grid layout, project cards, hover CTA, category tags -->
+      <!-- Customize: Titles, images, tags, and project links -->
+      <!-- ===================================================== -->
+
+      <section class="projects">
+        <!-- Container Start -->
+        <div class="container">
+          <div class="row">
+            <!-- ===================================== -->
+            <!-- Left Column: Section Heading -->
+            <!-- ===================================== -->
+            <div class="col-lg-6 projects__col-0">
+              <div class="projects__col-side">
+                <!-- Section Title -->
+                <div class="section-title">
+                  <!-- Pre-title -->
+                  <div class="pre-title">
+                    <!-- Icon -->
+                    <!-- Replace icon in: /images/branding/badges/ -->
+                    <div class="pre-title__icon-wrap">
+                      <img
+                        class="pre-title__icon"
+                        src="images/branding/badges/title-shape-dark.svg"
+                        data-light-src="images/branding/badges/title-shape-dark.svg"
+                        data-dark-src="images/branding/badges/title-shape-light.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </div>
+
+                    <!-- Label -->
+                    <!-- Editable Text -->
+                    <span class="pre-title__label">Client Results</span>
+                  </div>
+
+                  <!-- Main Title -->
+                  <!-- Editable Content Start -->
+                  <h2>
+                    <span class="cp-gray--modern">Projects That</span>
+                    Help Businesses Grow
+                    <span class="cp-brand-color">.</span>
+                  </h2>
+                  <!-- Editable Content End -->
+                </div>
+              </div>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Right Column: Projects Grid -->
+            <!-- ===================================== -->
+            <div class="col-lg-6">
+              <!-- Projects Grid Wrapper -->
+              <div class="projects__col-main">
+                <!-- ===================================================== -->
+                <!-- Project Item 01 -->
+                <!-- Customize: Title, tags, image, and link -->
+                <!-- ===================================================== -->
+                <div class="project__item">
+                  <!-- Top Bar: Title + Tags -->
+                  <div class="panel__top-bar">
+                    <!-- Project Title -->
+                    <h2 class="panel__title">Eco-Friendly Solutions</h2>
+
+                    <!-- Tags -->
+                    <!-- You can add/remove tags -->
+                    <div class="panel__tags">
+                      <span class="tag">Green Tech</span>
+                      <span class="tag">Solar</span>
+                    </div>
+                  </div>
+
+                  <!-- Project Image + CTA -->
+                  <figure class="panel__image-container">
+                    <!-- Replace image in: /images/sections/projects/ -->
+                    <img
+                      src="images/sections/projects/project-img-01.jpg"
+                      alt="Eco-Friendly Solutions"
+                      class="panel__image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+
+                    <!-- Project Link -->
+                    <!-- Update href to match project details page -->
+                    <a
+                      href="project-details.html"
+                      class="btn-default"
+                      aria-label="View Eco-Friendly Solutions project details"
+                    >
+                      <span class="btn-icon">
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </a>
+                  </figure>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Project Item 02 -->
+                <!-- ===================================================== -->
+                <div class="project__item">
+                  <div class="panel__top-bar">
+                    <h2 class="panel__title">Modern Architecture</h2>
+
+                    <div class="panel__tags">
+                      <span class="tag">Minimalist</span>
+                      <span class="tag">Construction</span>
+                      <span class="tag">Urban</span>
+                    </div>
+                  </div>
+
+                  <figure class="panel__image-container">
+                    <img
+                      src="images/sections/projects/project-img-02.jpg"
+                      alt="Modern Architecture"
+                      class="panel__image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+
+                    <a
+                      href="project-details.html"
+                      class="btn-default"
+                      aria-label="View Modern Architecture project details"
+                    >
+                      <span class="btn-icon">
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </a>
+                  </figure>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Project Item 03 -->
+                <!-- ===================================================== -->
+                <div class="project__item">
+                  <div class="panel__top-bar">
+                    <h2 class="panel__title">Digital Innovation</h2>
+
+                    <div class="panel__tags">
+                      <span class="tag">Ai</span>
+                      <span class="tag">Future</span>
+                      <span class="tag">Tech</span>
+                    </div>
+                  </div>
+
+                  <figure class="panel__image-container">
+                    <img
+                      src="images/sections/projects/project-img-03.jpg"
+                      alt="Digital Innovation"
+                      class="panel__image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+
+                    <a
+                      href="project-details.html"
+                      class="btn-default"
+                      aria-label="View Digital Innovation project details"
+                    >
+                      <span class="btn-icon">
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </a>
+                  </figure>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Project Item 04 -->
+                <!-- ===================================================== -->
+                <div class="project__item">
+                  <div class="panel__top-bar">
+                    <h2 class="panel__title">Digital Innovation 2</h2>
+
+                    <div class="panel__tags">
+                      <span class="tag">Ai</span>
+                      <span class="tag">Future</span>
+                      <span class="tag">Tech</span>
+                    </div>
+                  </div>
+
+                  <figure class="panel__image-container">
+                    <img
+                      src="images/sections/projects/project-img-04.jpg"
+                      alt="Digital Innovation 2"
+                      class="panel__image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+
+                    <a
+                      href="project-details.html"
+                      class="btn-default"
+                      aria-label="View Digital Innovation 2 project details"
+                    >
+                      <span class="btn-icon">
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </a>
+                  </figure>
+                </div>
+
+                <!-- ===================================== -->
+                <!-- More Projects Button -->
+                <!-- ===================================== -->
+
+                <!-- CTA Button -->
+                <!-- Update link to your projects page -->
+                <a href="projects.html" class="btn btn--circle btn--circle-big">
+                  More Projects
+                </a>
+
+                <!-- ===================================================== -->
+                <!-- Add New Project Guide -->
+                <!-- 
+                      To add a new project:
+                      1. Duplicate any .project__item block
+                      2. Update title, tags, and image
+                      3. Replace image in /images/sections/projects/
+                      4. Update link in href to project-details page
+                      -->
+                <!-- ===================================================== -->
+              </div>
+              <!-- /Projects Grid -->
+            </div>
+            <!-- /Right Column -->
+          </div>
+        </div>
+        <!-- /Container -->
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- End Projects Section -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- Video Section -->
+      <!-- Description: Displays a featured video with project details -->
+      <!-- Features: Popup video, project metadata, tags -->
+      <!-- Customize: Video URL, project info, tags, and links -->
+      <!-- ===================================================== -->
+
+      <section class="video">
+        <!-- Container Start -->
+        <div class="container pt-0 pb-0">
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Video Content Wrapper -->
+              <div class="video__content">
+                <!-- ===================================== -->
+                <!-- Video Thumbnail + Play Button -->
+                <!-- ===================================== -->
+                <div class="video__thumb">
+                  <!-- Video Popup Trigger -->
+                  <!-- Replace YouTube/Vimeo link in href -->
+                  <a
+                    href="https://www.youtube.com/watch?v=nqye02H_H6I"
+                    class="btn btn--circle btn--circle-medium popup-video"
+                    aria-label="Play featured project video"
+                  >
+                    <i class="fa-solid fa-play" aria-hidden="true"></i>
+                  </a>
+                </div>
+
+                <!-- ===================================== -->
+                <!-- Featured Project Info -->
+                <!-- ===================================== -->
+                <div class="video__featured-project">
+                  <!-- Header: Title + Link -->
+                  <div class="video__featured__header">
+                    <!-- Section Label -->
+                    <h3>Featured Project</h3>
+
+                    <!-- Project Details Link -->
+                    <!-- Update href -->
+                    <a
+                      href="project-details.html"
+                      class="btn-default btn-default--gray"
+                      aria-label="View Featured Project details"
+                    >
+                      <span class="btn-icon">
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </a>
+                  </div>
+
+                  <!-- Project Metadata -->
+                  <div class="video-featured-item">
+                    <!-- Duration -->
+                    <div class="video-featured-title">
+                      <span>Duration :</span>
+                      <span>4 Weeks</span>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="video-featured-title">
+                      <span>Date :</span>
+                      <span>10 January 2026</span>
+                    </div>
+
+                    <!-- Client -->
+                    <div class="video-featured-title">
+                      <span>Client :</span>
+                      <span>InovationDex</span>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="video-featured-title">
+                      <span>Services :</span>
+                      <span>Landing Page</span>
+                    </div>
+
+                    <!-- Tags -->
+                    <!-- You can add/remove tags -->
+                    <div class="video-featured-title">
+                      <span>Tags :</span>
+                      <div class="panel__tags video-featured-tags">
+                        <span class="tag tag--gray">Landing</span>
+                        <span class="tag tag--gray">Marketing</span>
+                        <span class="tag tag--gray">Conversion</span>
+                        <span class="tag tag--gray">Startup</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /Project Metadata -->
+                </div>
+                <!-- /Featured Project -->
+              </div>
+              <!-- /Video Content -->
+            </div>
+          </div>
+        </div>
+        <!-- /Container -->
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- End Video Section -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- Awards Section -->
+      <!-- Description: Displays achievements and recognitions in list format -->
+      <!-- Features: Structured rows, timeline-style layout -->
+      <!-- Customize: Award title, project name, and year -->
+      <!-- ===================================================== -->
+
+      <section class="awards">
+        <!-- Container Start -->
+        <div class="container">
+          <div class="row">
+            <!-- ===================================== -->
+            <!-- Section Title -->
+            <!-- ===================================== -->
+            <div class="col-lg-12">
+              <div class="section-title align-items-center w-100">
+                <!-- Editable Content Start -->
+                <h2>
+                  <span class="cp-gray--modern">Awards</span>
+                  & Recognition
+                  <span class="cp-brand-color">.</span>
+                </h2>
+                <!-- Editable Content End -->
+              </div>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Awards List -->
+            <!-- ===================================== -->
+            <div class="col-lg-12">
+              <div class="awards__content">
+                <!-- ===================================================== -->
+                <!-- Award Item 01 -->
+                <!-- Customize: Number, title, project, year -->
+                <!-- ===================================================== -->
+                <div class="data-row">
+                  <div class="row align-items-center">
+                    <div class="col-lg-1">
+                      <div class="data-row__number">01</div>
+                    </div>
+
+                    <div class="col-lg-5">
+                      <div class="data-row__title">Best Design Award</div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="data-row__project">Immersive Grid</div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="data-row__date">2024</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Award Item 02 -->
+                <!-- ===================================================== -->
+                <div class="data-row">
+                  <div class="row align-items-center">
+                    <div class="col-lg-1">
+                      <div class="data-row__number">02</div>
+                    </div>
+
+                    <div class="col-lg-5">
+                      <div class="data-row__title">Best UX Impact</div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="data-row__project">Design System Pro</div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="data-row__date">2023</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Award Item 03 -->
+                <!-- ===================================================== -->
+                <div class="data-row">
+                  <div class="row align-items-center">
+                    <div class="col-lg-1">
+                      <div class="data-row__number">03</div>
+                    </div>
+
+                    <div class="col-lg-5">
+                      <div class="data-row__title">Innovation in Digital</div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="data-row__project">Portfolio Platform</div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="data-row__date">2023</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Award Item 04 -->
+                <!-- ===================================================== -->
+                <div class="data-row">
+                  <div class="row align-items-center">
+                    <div class="col-lg-1">
+                      <div class="data-row__number">04</div>
+                    </div>
+
+                    <div class="col-lg-5">
+                      <div class="data-row__title">Excellence in Branding</div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="data-row__project">Visual Identity</div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="data-row__date">2022</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Award Item 05 -->
+                <!-- ===================================================== -->
+                <div class="data-row">
+                  <div class="row align-items-center">
+                    <div class="col-lg-1">
+                      <div class="data-row__number">05</div>
+                    </div>
+
+                    <div class="col-lg-5">
+                      <div class="data-row__title">
+                        Best Frontend Experience
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="data-row__project">Web Application</div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="data-row__date">2022</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Add New Award Guide -->
+                <!-- 
+                      To add a new award:
+                      1. Duplicate any .data-row block
+                      2. Update number, title, project name, and year
+                      3. Maintain consistent numbering format (01, 02, etc.)
+                      -->
+                <!-- ===================================================== -->
+              </div>
+              <!-- /Awards Content -->
+            </div>
+          </div>
+        </div>
+        <!-- /Container -->
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- End Awards Section -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- Testimonials Section -->
+      <!-- Description: Displays client testimonials in a slider/carousel -->
+      <!-- Features: Swiper slider, pagination, author info, quotes -->
+      <!-- Customize: Names, images, text, and number of slides -->
+      <!-- ===================================================== -->
+
+      <section class="testimonials">
+        <!-- Container Start -->
+        <div class="container">
+          <!-- ===================================== -->
+          <!-- Section Header -->
+          <!-- ===================================== -->
+          <div class="row">
+            <!-- Pre-title -->
+            <div class="col-lg-4">
+              <div class="pre-title pre-title--light">
+                <!-- Icon -->
+                <!-- Replace icon in: /images/branding/badges/ -->
+                <div class="pre-title__icon-wrap">
+                  <img
+                    class="pre-title__icon"
+                    src="images/branding/badges/title-shape-light.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+
+                <!-- Label -->
+                <span class="pre-title__label text-white">Testimonials</span>
+              </div>
+            </div>
+
+            <!-- Title -->
+            <div class="col-lg-8">
+              <div class="section-title">
+                <h2 class="text-white">
+                  Experiences That Matter to Clients
+                  <span class="cp-brand-color">.</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===================================== -->
+          <!-- Testimonials Slider -->
+          <!-- ===================================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Pagination -->
+              <!-- Controlled via Swiper.js -->
+              <div class="swiper-pagination">
+                <span class="swiper-pagination-current">01</span>
+                <span class="swiper-pagination-divider"></span>
+                <span class="swiper-pagination-total">05</span>
+              </div>
+
+              <!-- Swiper Slider -->
+              <div
+                class="swiper testimonial-swiper"
+                data-cursor-state="slide"
+                role="region"
+                aria-roledescription="carousel"
+                aria-label="Client Testimonials"
+              >
+                <div class="swiper-wrapper">
+                  <!-- ===================== -->
+                  <!-- Slide 01 -->
+                  <!-- ===================== -->
+                  <div class="swiper-slide">
+                    <div class="testimonial__card">
+                      <div class="testimonial__author">
+                        <div class="testimonial__author-image">
+                          <img
+                            src="images/sections/testimonials/profile-pic-01.png"
+                            alt="John Doe"
+                          />
+                        </div>
+                        <div class="testimonial__author-info">
+                          <p class="testimonial__author-name">John Doe</p>
+                          <p class="testimonial__author-position">
+                            CEO, Company A
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="testimonial__card-content">
+                        <h3 class="testimonial__card-title">
+                          <span class="cp-gray--modern"
+                            >A true professional</span
+                          >
+                          who inspires confidence<span class="cp-brand-color"
+                            >.</span
+                          >
+                        </h3>
+                        <p>
+                          Working with this team has been an absolute pleasure.
+                          Their professionalism and attention to detail exceeded
+                          our expectations.
+                        </p>
+                      </div>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- ===================== -->
+                  <!-- Slide 02 -->
+                  <!-- ===================== -->
+                  <div class="swiper-slide">
+                    <div class="testimonial__card">
+                      <div class="testimonial__author">
+                        <div class="testimonial__author-image">
+                          <img
+                            src="images/sections/testimonials/profile-pic-02.png"
+                            alt="Jane Smith"
+                          />
+                        </div>
+                        <div class="testimonial__author-info">
+                          <p class="testimonial__author-name">
+                            Dr. Ahmed Rahmani
+                          </p>
+                          <p class="testimonial__author-position">
+                            FutureLearn Institute
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="testimonial__card-content">
+                        <h3 class="testimonial__card-title">
+                          <span class="cp-gray--modern">Orivex completely</span>
+                          changed how our students engage<span
+                            class="cp-brand-color"
+                            >.</span
+                          >
+                        </h3>
+                        <p>
+                          The immersive experience makes complex concepts easier
+                          and more memorable for students.
+                        </p>
+                      </div>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- ===================== -->
+                  <!-- Slide 03 -->
+                  <!-- ===================== -->
+                  <div class="swiper-slide">
+                    <div class="testimonial__card">
+                      <div class="testimonial__author">
+                        <div class="testimonial__author-image">
+                          <img
+                            src="images/sections/testimonials/profile-pic-03.png"
+                            alt="Mike Johnson"
+                          />
+                        </div>
+                        <div class="testimonial__author-info">
+                          <p class="testimonial__author-name">Mark Ellison</p>
+                          <p class="testimonial__author-position">
+                            EduCore Solutions
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="testimonial__card-content">
+                        <h3 class="testimonial__card-title">
+                          <span class="cp-gray--modern">Innovation backed</span>
+                          by real expertise<span class="cp-brand-color">.</span>
+                        </h3>
+                        <p>
+                          A seamless blend of technology and usability. This
+                          isn’t just design—it’s a meaningful experience.
+                        </p>
+                      </div>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- ===================== -->
+                  <!-- Slide 04 -->
+                  <!-- ===================== -->
+                  <div class="swiper-slide">
+                    <div class="testimonial__card">
+                      <div class="testimonial__author">
+                        <div class="testimonial__author-image">
+                          <img
+                            src="images/sections/testimonials/profile-pic-04.png"
+                            alt="Sarah Williams"
+                          />
+                        </div>
+                        <div class="testimonial__author-info">
+                          <p class="testimonial__author-name">Bob Benyahia</p>
+                          <p class="testimonial__author-position">
+                            Nova Academy
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="testimonial__card-content">
+                        <h3 class="testimonial__card-title">
+                          <span class="cp-gray--modern">Forward-thinking</span>
+                          and impactful<span class="cp-brand-color">.</span>
+                        </h3>
+                        <p>
+                          A modern platform that feels intuitive and engaging
+                          from day one for both students and instructors.
+                        </p>
+                      </div>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- ===================== -->
+                  <!-- Slide 05 -->
+                  <!-- ===================== -->
+                  <div class="swiper-slide">
+                    <div class="testimonial__card">
+                      <div class="testimonial__author">
+                        <div class="testimonial__author-image">
+                          <img
+                            src="images/sections/testimonials/profile-pic-05.png"
+                            alt="David Brown"
+                          />
+                        </div>
+                        <div class="testimonial__author-info">
+                          <p class="testimonial__author-name">James Walker</p>
+                          <p class="testimonial__author-position">
+                            BrightPath Education
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="testimonial__card-content">
+                        <h3 class="testimonial__card-title">
+                          <span class="cp-gray--modern"
+                            >Reliable and scalable</span
+                          >
+                          solution<span class="cp-brand-color">.</span>
+                        </h3>
+                        <p>
+                          From onboarding to daily use, everything runs
+                          smoothly. A truly immersive experience.
+                        </p>
+                      </div>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Add New Testimonial Guide -->
+              <!-- 
+                    1. Duplicate a .swiper-slide block
+                    2. Update image, name, and text
+                    3. Swiper auto-detects new slides
+                    -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- End Testimonials Section -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- Clients Section -->
+      <!-- Description: Displays client logos in a horizontal slider -->
+      <!-- Features: Swiper slider, logo cards, continuous scrolling -->
+      <!-- Customize: Logos, number of slides, and image paths -->
+      <!-- ===================================================== -->
+
+      <section class="clients">
+        <!-- ===================================== -->
+        <!-- Section Header -->
+        <!-- ===================================== -->
+        <div class="container-header">
+          <!-- Section Title -->
+          <!-- Editable Content Start -->
+          <div class="section-title">
+            <h2>
+              Trusted by 100+ Brands
+              <span class="cp-brand-color">.</span>
+            </h2>
+          </div>
+          <!-- Editable Content End -->
+        </div>
+
+        <!-- Divider -->
+        <div class="divider divider-title"></div>
+
+        <!-- ===================================== -->
+        <!-- Clients Logos Slider -->
+        <!-- ===================================== -->
+        <div class="container-border">
+          <!-- Swiper Slider -->
+          <div class="swiper client-swiper" data-cursor-state="slide">
+            <div class="swiper-wrapper">
+              <!-- ===================================================== -->
+              <!-- Client Logo 01 -->
+              <!-- Replace logo in: /images/sections/clients/logos/ -->
+              <!-- ===================================================== -->
+              <div class="swiper-slide">
+                <div class="clients__card">
+                  <img
+                    src="images/sections/clients/logos/client-logo-01.svg"
+                    alt="Client logo 1"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+
+              <!-- ===================================================== -->
+              <!-- Client Logo 02 -->
+              <!-- ===================================================== -->
+              <div class="swiper-slide">
+                <div class="clients__card">
+                  <img
+                    src="images/sections/clients/logos/client-logo-02.svg"
+                    alt="Client logo 2"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+
+              <!-- ===================================================== -->
+              <!-- Client Logo 03 -->
+              <!-- ===================================================== -->
+              <div class="swiper-slide">
+                <div class="clients__card">
+                  <img
+                    src="images/sections/clients/logos/client-logo-03.svg"
+                    alt="Client logo 3"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+
+              <!-- ===================================================== -->
+              <!-- Client Logo 04 -->
+              <!-- ===================================================== -->
+              <div class="swiper-slide">
+                <div class="clients__card">
+                  <img
+                    src="images/sections/clients/logos/client-logo-04.svg"
+                    alt="Client logo 4"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+
+              <!-- ===================================================== -->
+              <!-- Client Logo 05 -->
+              <!-- ===================================================== -->
+              <div class="swiper-slide">
+                <div class="clients__card">
+                  <img
+                    src="images/sections/clients/logos/client-logo-05.svg"
+                    alt="Client logo 5"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+
+              <!-- ===================================================== -->
+              <!-- Client Logo 06 -->
+              <!-- ===================================================== -->
+              <div class="swiper-slide">
+                <div class="clients__card">
+                  <img
+                    src="images/sections/clients/logos/client-logo-06.svg"
+                    alt="Client logo 6"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+
+              <!-- ===================================================== -->
+              <!-- Client Logo 07 -->
+              <!-- ===================================================== -->
+              <div class="swiper-slide">
+                <div class="clients__card">
+                  <img
+                    src="images/sections/clients/logos/client-logo-07.svg"
+                    alt="Client logo 7"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- /Swiper Wrapper -->
+          </div>
+          <!-- /Swiper -->
+
+          <!-- ===================================================== -->
+          <!-- Add New Client Logo Guide -->
+          <!-- 
+                To add a new client logo:
+                1. Duplicate any .swiper-slide block
+                2. Replace the image in /images/sections/clients/logos/
+                3. Update alt text for accessibility
+                4. Swiper will automatically include the new slide
+                -->
+          <!-- ===================================================== -->
+        </div>
+        <!-- /Container Border -->
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- End Clients Section -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- FAQ Section -->
+      <!-- Description: Displays frequently asked questions using accordion -->
+      <!-- Features: Bootstrap accordion, collapsible items, accessible markup -->
+      <!-- Customize: Questions, answers, number of items -->
+      <!-- ===================================================== -->
+
+      <section class="faq">
+        <!-- ===================================== -->
+        <!-- Container Start -->
+        <!-- ===================================== -->
+        <div class="container">
+          <!-- ===================================== -->
+          <!-- Section Header -->
+          <!-- ===================================== -->
+          <div class="row">
+            <!-- Pre-title -->
+            <div class="col-12 col-xl-2">
+              <div class="pre-title">
+                <!-- Icon -->
+                <!-- Replace icon in: /images/branding/badges/ -->
+                <div class="pre-title__icon-wrap">
+                  <img
+                    class="pre-title__icon"
+                    src="images/branding/badges/title-shape-dark.svg"
+                    data-light-src="images/branding/badges/title-shape-dark.svg"
+                    data-dark-src="images/branding/badges/title-shape-light.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+
+                <!-- Label -->
+                <span class="pre-title__label">FAQ</span>
+              </div>
+            </div>
+
+            <!-- Title -->
+            <div class="col-12 col-xl-8 d-flex justify-content-center">
+              <div class="section-title text-center">
+                <h2>
+                  Clear Answers Before We Work Together
+                  <span class="cp-brand-color">.</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===================================== -->
+          <!-- FAQ Accordion -->
+          <!-- ===================================== -->
+          <div class="row">
+            <div class="col-12 col-xl-2"></div>
+
+            <div class="col-12 col-xl-8">
+              <div class="accordion--light">
+                <!-- Accordion Wrapper -->
+                <div class="accordion" id="faqAccordion">
+                  <!-- ===================================================== -->
+                  <!-- FAQ Item 01 -->
+                  <!-- ===================================================== -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-1">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-collapse-1"
+                        aria-expanded="true"
+                        aria-controls="faq-collapse-1"
+                      >
+                        <span>
+                          <span class="accordion-number">01.</span>
+                          How long does it take to design a website?
+                        </span>
+                        <span class="accordion-icon" aria-hidden="true">
+                          <span></span><span></span>
+                        </span>
+                      </button>
+                    </h2>
+
+                    <div
+                      id="faq-collapse-1"
+                      class="accordion-collapse collapse show"
+                      role="region"
+                      aria-labelledby="faq-heading-1"
+                      data-bs-parent="#faqAccordion"
+                    >
+                      <div class="accordion-body">
+                        Most websites are completed within 2 to 4 weeks,
+                        depending on the project size and how quickly content is
+                        provided. You'll always know the timeline upfront, with
+                        clear milestones along the way. I also share progress
+                        updates at each key stage. This keeps the process smooth
+                        and predictable from day one.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ===================================================== -->
+                  <!-- FAQ Item 02 -->
+                  <!-- ===================================================== -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-2">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-collapse-2"
+                        aria-expanded="false"
+                        aria-controls="faq-collapse-2"
+                      >
+                        <span>
+                          <span class="accordion-number">02.</span>
+                          Will my website work on mobile devices?
+                        </span>
+                        <span class="accordion-icon" aria-hidden="true">
+                          <span></span><span></span>
+                        </span>
+                      </button>
+                    </h2>
+
+                    <div
+                      id="faq-collapse-2"
+                      class="accordion-collapse collapse"
+                      role="region"
+                      aria-labelledby="faq-heading-2"
+                      data-bs-parent="#faqAccordion"
+                    >
+                      <div class="accordion-body">
+                        Absolutely. Every website is fully responsive, meaning
+                        it’s designed to look and work perfectly on phones,
+                        tablets, and desktops not adapted later, but planned
+                        from the start. Layouts are tested across common screen
+                        sizes before launch. Performance and readability are
+                        optimized for touch users too.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ===================================================== -->
+                  <!-- FAQ Item 03 -->
+                  <!-- ===================================================== -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-3">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-collapse-3"
+                        aria-expanded="false"
+                        aria-controls="faq-collapse-3"
+                      >
+                        <span>
+                          <span class="accordion-number">03.</span>
+                          Can you redesign my existing website?
+                        </span>
+                        <span class="accordion-icon" aria-hidden="true">
+                          <span></span><span></span>
+                        </span>
+                      </button>
+                    </h2>
+
+                    <div
+                      id="faq-collapse-3"
+                      class="accordion-collapse collapse"
+                      role="region"
+                      aria-labelledby="faq-heading-3"
+                      data-bs-parent="#faqAccordion"
+                    >
+                      <div class="accordion-body">
+                        Yes. Whether your current site needs a visual refresh or
+                        a complete structural rethink, I redesign websites to
+                        improve clarity, usability, and conversions, not just
+                        appearance. I can also keep your existing content while
+                        modernizing the experience. If needed, I migrate the
+                        site with minimal downtime.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ===================================================== -->
+                  <!-- FAQ Item 04 -->
+                  <!-- ===================================================== -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-4">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-collapse-4"
+                        aria-expanded="false"
+                        aria-controls="faq-collapse-4"
+                      >
+                        <span>
+                          <span class="accordion-number">04.</span>
+                          What do you need to get started?
+                        </span>
+                        <span class="accordion-icon" aria-hidden="true">
+                          <span></span><span></span>
+                        </span>
+                      </button>
+                    </h2>
+
+                    <div
+                      id="faq-collapse-4"
+                      class="accordion-collapse collapse"
+                      role="region"
+                      aria-labelledby="faq-heading-4"
+                      data-bs-parent="#faqAccordion"
+                    >
+                      <div class="accordion-body">
+                        You don’t need everything figured out. We’ll start with
+                        a short discussion about your goals, audience, and
+                        brand. I’ll guide you step by step on content,
+                        structure, and decisions. You will receive a clear
+                        checklist so nothing gets missed. Early direction helps
+                        us move faster and avoid revisions later.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ===================================================== -->
+                  <!-- FAQ Item 05 -->
+                  <!-- ===================================================== -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-5">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-collapse-5"
+                        aria-expanded="false"
+                        aria-controls="faq-collapse-5"
+                      >
+                        <span>
+                          <span class="accordion-number">05.</span>
+                          What happens after launch?
+                        </span>
+                        <span class="accordion-icon" aria-hidden="true">
+                          <span></span><span></span>
+                        </span>
+                      </button>
+                    </h2>
+
+                    <div
+                      id="faq-collapse-5"
+                      class="accordion-collapse collapse"
+                      role="region"
+                      aria-labelledby="faq-heading-5"
+                      data-bs-parent="#faqAccordion"
+                    >
+                      <div class="accordion-body">
+                        After launch, you're not left alone. I provide guidance,
+                        support, and optional maintenance to ensure your website
+                        stays secure, updated, and effective over time. I can
+                        also help with future improvements as your business
+                        grows. Regular check-ins keep everything running at peak
+                        quality.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ===================================================== -->
+                  <!-- FAQ Item 06 -->
+                  <!-- ===================================================== -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-6">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-collapse-6"
+                        aria-expanded="false"
+                        aria-controls="faq-collapse-6"
+                      >
+                        <span>
+                          <span class="accordion-number">06.</span>
+                          Do you provide SEO setup?
+                        </span>
+                        <span class="accordion-icon" aria-hidden="true">
+                          <span></span><span></span>
+                        </span>
+                      </button>
+                    </h2>
+
+                    <div
+                      id="faq-collapse-6"
+                      class="accordion-collapse collapse"
+                      role="region"
+                      aria-labelledby="faq-heading-6"
+                      data-bs-parent="#faqAccordion"
+                    >
+                      <div class="accordion-body">
+                        Yes. Basic on-page SEO is included, such as clean
+                        heading structure, meta tags, and performance-focused
+                        markup. I can also prepare your site for ongoing SEO
+                        work with analytics and search console setup.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Accordion -->
+
+                <!-- ===================================================== -->
+                <!-- Add New FAQ Guide -->
+                <!-- 
+                      1. Duplicate any .accordion-item block
+                      2. Increment IDs (faq-heading-X / faq-collapse-X)
+                      3. Update question and answer
+                      -->
+                <!-- ===================================================== -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Separator -->
+        <div class="section-separator"></div>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- End FAQ Section -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- Blog Section -->
+      <!-- Description: Displays latest blog articles in card layout -->
+      <!-- Features: Responsive cards, hover-ready structure, CTA link -->
+      <!-- Customize: Blog titles, images, dates, links -->
+      <!-- ===================================================== -->
+
+      <section class="blog">
+        <!-- ===================================== -->
+        <!-- Container Start -->
+        <!-- ===================================== -->
+        <div class="container">
+          <!-- ===================================== -->
+          <!-- Section Header -->
+          <!-- ===================================== -->
+          <div class="row">
+            <!-- Pre-title -->
+            <div class="col-lg-4">
+              <div class="pre-title">
+                <!-- Icon -->
+                <!-- Replace icon in: /images/branding/badges/ -->
+                <div class="pre-title__icon-wrap">
+                  <img
+                    class="pre-title__icon"
+                    src="images/branding/badges/title-shape-dark.svg"
+                    data-light-src="images/branding/badges/title-shape-dark.svg"
+                    data-dark-src="images/branding/badges/title-shape-light.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+
+                <!-- Label -->
+                <span class="pre-title__label">Blog</span>
+              </div>
+            </div>
+
+            <!-- Title -->
+            <div class="col-lg-8">
+              <div class="section-title">
+                <h2>
+                  <span class="cp-gray--modern">Web Design</span>
+                  Insights That Help You Grow
+                  <span class="cp-brand-color">.</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===================================== -->
+          <!-- Blog Cards -->
+          <!-- ===================================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Blog Items Wrapper -->
+              <div class="blog__items-wrapper">
+                <!-- ===================================================== -->
+                <!-- Blog Item 01 -->
+                <!-- ===================================================== -->
+                <article class="blog__item">
+                  <!-- Cover Image -->
+                  <!-- Replace images in: /images/sections/blog/ -->
+                  <figure class="blog__item-cover">
+                    <img
+                      src="images/sections/blog/blog-img-01.jpg"
+                      alt="Designing Websites That Actually Convert cover image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+
+                    <!-- Meta Date -->
+                    <div class="meta-label-wrapper">
+                      <div class="meta-label">
+                        <span
+                          class="meta-label__dot meta-label__dot--brand"
+                        ></span>
+                        <span class="meta-label__text">21 Jan 2026</span>
+                      </div>
+                    </div>
+                  </figure>
+
+                  <!-- Title -->
+                  <h3 class="blog__item-title">
+                    Designing Websites That Actually Convert
+                    <span class="cp-brand-color">.</span>
+                  </h3>
+
+                  <!-- Read More Link -->
+                  <div class="blog__link-wrapper">
+                    <a
+                      href="blog-details.html"
+                      class="link"
+                      aria-label="Read Designing Websites That Actually Convert article"
+                    >
+                      Read More
+                      <span class="link__icon-wrapper" aria-hidden="true">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </span>
+                    </a>
+                  </div>
+                </article>
+
+                <!-- ===================================================== -->
+                <!-- Blog Item 02 -->
+                <!-- ===================================================== -->
+                <article class="blog__item">
+                  <figure class="blog__item-cover">
+                    <img
+                      src="images/sections/blog/blog-img-02.jpg"
+                      alt="Why User Experience Matters More Than Ever cover image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+
+                    <div class="meta-label-wrapper">
+                      <div class="meta-label">
+                        <span
+                          class="meta-label__dot meta-label__dot--brand"
+                        ></span>
+                        <span class="meta-label__text">18 Jan 2026</span>
+                      </div>
+                    </div>
+                  </figure>
+
+                  <h3 class="blog__item-title">
+                    Why User Experience Matters More Than Ever
+                    <span class="cp-brand-color">.</span>
+                  </h3>
+
+                  <div class="blog__link-wrapper">
+                    <a
+                      href="blog-details.html"
+                      class="link"
+                      aria-label="Read Why User Experience Matters More Than Ever article"
+                    >
+                      Read More
+                      <span class="link__icon-wrapper" aria-hidden="true">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </span>
+                    </a>
+                  </div>
+                </article>
+
+                <!-- ===================================================== -->
+                <!-- Blog Item 03 -->
+                <!-- ===================================================== -->
+                <article class="blog__item">
+                  <figure class="blog__item-cover">
+                    <img
+                      src="images/sections/blog/blog-img-03.jpg"
+                      alt="From Concept to Launch: My Web Design Process cover image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+
+                    <div class="meta-label-wrapper">
+                      <div class="meta-label">
+                        <span
+                          class="meta-label__dot meta-label__dot--brand"
+                        ></span>
+                        <span class="meta-label__text">10 Jan 2026</span>
+                      </div>
+                    </div>
+                  </figure>
+
+                  <h3 class="blog__item-title">
+                    From Concept to Launch: My Web Design Process
+                    <span class="cp-brand-color">.</span>
+                  </h3>
+
+                  <div class="blog__link-wrapper">
+                    <a
+                      href="blog-details.html"
+                      class="link"
+                      aria-label="Read From Concept to Launch: My Web Design Process article"
+                    >
+                      Read More
+                      <span class="link__icon-wrapper" aria-hidden="true">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </span>
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <!-- /Blog Items Wrapper -->
+            </div>
+          </div>
+
+          <!-- ===================================== -->
+          <!-- Blog CTA -->
+          <!-- ===================================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="blog__cta">
+                <!-- CTA Text -->
+                <p>
+                  We are dedicated to driving success through cutting-edge
+                  strategies
+                  <a href="blog-list.html" class="link">See All Articles</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================== -->
+        <!-- End Container -->
+        <!-- ===================================== -->
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- End Blog Section -->
+      <!-- ===================================================== -->
+    </main>
+
+    <!-- ===================================================== -->
+    <!-- Footer Section -->
+    <!-- Description: Main website footer with contact info, links, social icons, and contact form -->
+    <!-- Features: Responsive layout, contact form, social links, newsletter-style interaction -->
+    <!-- Backend: Form submits to /api/contact -->
+    <!-- Customize: Emails, phone, links, social URLs, branding -->
+    <!-- ===================================================== -->
+
+    <footer class="footer">
+      <!-- ===================================== -->
+      <!-- Container Start -->
+      <!-- ===================================== -->
+      <div class="container container-footer">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- ===================================== -->
+            <!-- Footer Title Section -->
+            <!-- ===================================== -->
+            <div class="footer__title-wrapper">
+              <!-- Main Heading -->
+              <h2>Let's <span class="brand-gradient">Have a Chat</span></h2>
+
+              <!-- Badge / Decorative Elements -->
+              <!-- Replace assets in: /images/sections/footer/ -->
+              <div class="footer__badge">
+                <img
+                  class="footer__badge-icon"
+                  src="images/sections/footer/footer-chat-dark.svg"
+                  data-light-src="images/sections/footer/footer-chat-dark.svg"
+                  data-dark-src="images/sections/footer/footer-chat-light.svg"
+                  alt="Chat icon"
+                />
+
+                <img
+                  class="footer__badge-img"
+                  src="images/sections/footer/footer-badge-dark.png"
+                  data-light-src="images/sections/footer/footer-badge-dark.png"
+                  data-dark-src="images/sections/footer/footer-badge-light.png"
+                  alt="Quality badge"
+                />
+              </div>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Footer Content Wrapper -->
+            <!-- ===================================== -->
+            <div class="footer__contact-wrapper">
+              <div class="row">
+                <!-- ===================================== -->
+                <!-- LEFT COLUMN: Contact / Links / Social -->
+                <!-- ===================================== -->
+                <div class="col-lg-6 col-md-12">
+                  <div class="footer__items-wrapper">
+                    <div class="footer__items-group">
+                      <!-- ========================= -->
+                      <!-- Contact Section -->
+                      <!-- ========================= -->
+                      <div class="footer__contact-item">
+                        <h3>Contact</h3>
+
+                        <div class="footer__contact-infos">
+                          <!-- Phone -->
+                          <div class="footer__contact-content">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <div class="footer__contact-info-wrapper">
+                              <p>Call Me</p>
+                              <a class="link" href="tel:+1234567890"
+                                >+1 (234) 567-890</a
+                              >
+                            </div>
+                          </div>
+
+                          <!-- Email -->
+                          <div class="footer__contact-content">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div class="footer__contact-info-wrapper">
+                              <p>Need Support</p>
+                              <a class="link" href="mailto:hello@mail.com"
+                                >hello@mail.com</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- ========================= -->
+                      <!-- Quick Links Section -->
+                      <!-- ========================= -->
+                      <div class="footer__contact-item">
+                        <h3>Quick Links</h3>
+
+                        <ul aria-label="Quick links">
+                          <li><a class="link" href="index.html">Home</a></li>
+                          <li><a class="link" href="about.html">About</a></li>
+                          <li>
+                            <a class="link" href="services-list.html"
+                              >Services</a
+                            >
+                          </li>
+                          <li>
+                            <a class="link" href="projects.html">Portfolio</a>
+                          </li>
+                          <li>
+                            <a class="link" href="contact.html">Contact</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- ========================= -->
+                    <!-- Social Links Section -->
+                    <!-- ========================= -->
+                    <div class="footer__social-wrapper">
+                      <div class="footer__contact-item">
+                        <div class="footer__social-container">
+                          <h3>Social</h3>
+
+                          <div class="footer__social-items">
+                            <a
+                              href="#"
+                              class="btn btn--social btn--social-lg"
+                              aria-label="Visit our Facebook page"
+                            >
+                              <i
+                                class="fab fa-facebook-f"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+
+                            <a
+                              href="#"
+                              class="btn btn--social btn--social-lg"
+                              aria-label="Visit our Twitter Profile"
+                            >
+                              <i
+                                class="fab fa-x-twitter"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+
+                            <a
+                              href="#"
+                              class="btn btn--social btn--social-lg"
+                              aria-label="Visit our LinkedIn Profile"
+                            >
+                              <i
+                                class="fab fa-linkedin-in"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+
+                            <a
+                              href="#"
+                              class="btn btn--social btn--social-lg"
+                              aria-label="Visit our Instagram Profile"
+                            >
+                              <i
+                                class="fab fa-instagram"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================== -->
+                <!-- RIGHT COLUMN: Contact Form -->
+                <!-- ===================================== -->
+                <div class="col-lg-6 col-md-12">
+                  <div class="footer__form-wrapper">
+                    <!-- Contact Form -->
+                    <!-- Backend: mail.php -->
+                    <form
+                      action="mail.php"
+                      method="POST"
+                      class="cp-form"
+                      accept-charset="UTF-8"
+                    >
+                      <h4 class="cp-form__title">Say Hi!</h4>
+
+                      <small class="cp-form__note">
+                        Fields with an asterisk (*) are required!
+                      </small>
+
+                      <!-- Honeypot -->
+                      <div class="cp-form-honeypot" aria-hidden="true">
+                        <label for="cp-company-name"
+                          >Leave this field empty</label
+                        >
+                        <input
+                          class="cp-form-control"
+                          id="cp-company-name"
+                          name="company_name"
+                          type="text"
+                          tabindex="-1"
+                          autocomplete="off"
+                        />
+                      </div>
+
+                      <!-- Name -->
+                      <div class="cp-form-group">
+                        <label for="cp-name">
+                          Name <span aria-hidden="true">*</span>
+                        </label>
+                        <input
+                          class="cp-form-control"
+                          id="cp-name"
+                          name="user_name"
+                          type="text"
+                          placeholder="your name"
+                          required
+                        />
+                      </div>
+
+                      <!-- Email -->
+                      <div class="cp-form-group">
+                        <label for="cp-email">
+                          Email <span aria-hidden="true">*</span>
+                        </label>
+                        <input
+                          class="cp-form-control"
+                          id="cp-email"
+                          name="user_email"
+                          type="email"
+                          placeholder="your email"
+                          required
+                        />
+                      </div>
+
+                      <!-- Message -->
+                      <div class="cp-form-group">
+                        <label for="cp-message">
+                          Message <span aria-hidden="true">*</span>
+                        </label>
+                        <textarea
+                          class="cp-form-control"
+                          id="cp-message"
+                          name="user_message"
+                          rows="6"
+                          placeholder="your message"
+                          required
+                        ></textarea>
+                      </div>
+
+                      <!-- Terms Checkbox -->
+                      <div class="cp-form-check">
+                        <input
+                          type="checkbox"
+                          id="checkBox"
+                          name="checkBox"
+                          required
+                          aria-describedby="terms-description"
+                        />
+
+                        <small id="terms-description" class="visually-hidden">
+                          You must accept the terms and conditions before
+                          submitting.
+                        </small>
+
+                        <label for="checkBox">
+                          I agree to the terms and conditions.
+                        </label>
+                      </div>
+
+                      <div class="cp-form-feedback" aria-live="polite"></div>
+
+                      <!-- Submit Button -->
+                      <button type="submit" class="btn-default btn--w-100">
+                        <span class="btn-default-inner">
+                          <span data-hover="Submit Now">Submit Now</span>
+                        </span>
+
+                        <span class="btn-icon">
+                          <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                          ></i>
+                        </span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Footer Copyright -->
+            <!-- ===================================== -->
+            <div class="footer__copyright">
+              <p>&copy; 2026 CodePower. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===================================================== -->
+    <!-- End Footer Section -->
+    <!-- ===================================================== -->
+
+    <!-- To Top Button Start -->
+    <a href="#" id="to-top" class="btn-to-top" aria-label="Back to top">
+      <i class="fa-solid fa-angle-up" aria-hidden="true"></i>
+    </a>
+    <!-- To Top Button End -->
+
+    <!-- Scripts -->
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <!-- GSAP JS -->
+    <script src="js/gsap.min.js" defer></script>
+    <!-- Lenis JS -->
+    <script src="js/lenis.min.js" defer></script>
+    <!-- SplitText JS -->
+    <script src="js/SplitText.min.js" defer></script>
+    <!-- ScrollTrigger JS -->
+    <script src="js/ScrollTrigger.min.js" defer></script>
+    <!-- CustomEase JS -->
+    <script src="js/CustomEase.min.js" defer></script>
+    <!-- Magic Cursor JS -->
+    <script src="js/magic-cursor.js" defer></script>
+    <!-- Nice Select JS -->
+    <script src="js/nice-select.js" defer></script>
+    <!-- Parallaxie JS -->
+    <script src="js/parallaxie.js" defer></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.js" defer></script>
+    <!-- Ukiyo JS -->
+    <script src="js/ukiyo.min.js" defer></script>
+    <!-- Magnific JS -->
+    <script src="js/jquery.magnific-popup.min.js" defer></script>
+
+    <script src="js/script.js" defer></script>
+  </body>
+
+</html>

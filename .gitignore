@@ -1,0 +1,8 @@
+.gstack/
+.claude/
+.DS_Store
+hts-cache/
+hts-log.txt
+backblue.gif
+fade.gif
+_site/

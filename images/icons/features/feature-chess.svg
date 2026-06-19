@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+  <defs>
+    <!-- Gradient -->
+    <linearGradient id="grad" x1="512" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6E78FF"/>
+      <stop offset="100%" stop-color="#63DFE4"/>
+    </linearGradient>
+
+    <!-- Grain -->
+    <filter id="grain">
+      <feTurbulence baseFrequency="0.6" numOctaves="5" seed="4"/>
+    </filter>
+
+    <!-- Mask (your shape) -->
+    <mask id="shapeMask">
+      <g transform="translate(0,512) scale(0.1,-0.1)" fill="white">
+        <path d="M2446 4909 c-406 -55 -719 -394 -743 -804 -16 -290 115 -567 351
+        -742 l58 -43 -174 0 c-235 0 -308 -20 -410 -110 -54 -47 -104 -140 -113 -211
+        -15 -105 39 -230 132 -305 69 -56 148 -85 258 -92 l90 -7 -3 -105 c-10 -393
+        -183 -827 -473 -1187 -39 -48 -130 -148 -203 -221 l-131 -132 -3 -329 c-3
+        -362 1 -391 53 -411 36 -14 2814 -14 2850 0 52 20 56 49 53 410 l-3 328 -145
+        149 c-80 81 -181 195 -225 253 -268 351 -415 732 -441 1143 l-7 107 69 0 c177
+        0 318 79 386 218 28 57 33 76 33 142 0 66 -5 85 -33 142 -21 42 -50 82 -80
+        108 -102 90 -175 110 -410 110 l-174 0 58 43 c426 315 473 929 100 1301 -186
+        186 -463 280 -720 245z"/>
+      </g>
+    </mask>
+  </defs>
+
+  <!-- Gradient layer -->
+  <g mask="url(#shapeMask)">
+    <rect width="512" height="512" fill="url(#grad)"/>
+  </g>
+
+  <!-- Grain layer -->
+  <g mask="url(#shapeMask)" style="mix-blend-mode: overlay;">
+    <rect width="512" height="512" fill="gray" filter="url(#grain)" opacity="0.35"/>
+  </g>
+
+</svg>

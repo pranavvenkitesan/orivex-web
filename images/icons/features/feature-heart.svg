@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 512 512"
+     preserveAspectRatio="xMidYMid meet">
+
+  <defs>
+    <!-- Gradient -->
+    <linearGradient id="grad" x1="512" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2b8bfe"/>
+      <stop offset="100%" stop-color="#60efff"/>
+    </linearGradient>
+
+    <!-- Grain -->
+    <filter id="grain">
+      <feTurbulence baseFrequency="0.6" numOctaves="5" seed="4"/>
+    </filter>
+
+    <!-- Mask (YOUR SHAPE) -->
+    <mask id="shapeMask">
+      <g transform="translate(0,512) scale(0.1,-0.1)">
+        <path fill="white" d="M1295 4670 c-336 -38 -624 -178 -866 -419 -265 -265 -406 -583 -425 -958 -32 -618 422 -1314 1338 -2050 264 -213 530 -400 838 -593 236 -148 349 -210 381 -210 45 0 428 228 721 430 812 558 1395 1145 1656 1666 225 450 239 887 41 1313 -131 282 -407 559 -684 687 -566 261 -1211 154 -1642 -273 l-92 -91 -93 91 c-214 212 -472 344 -773 397 -86 15 -306 20 -400 10z"/>
+      </g>
+    </mask>
+  </defs>
+
+  <!-- Gradient fill (clipped by mask) -->
+  <g mask="url(#shapeMask)">
+    <rect width="512" height="512" fill="url(#grad)"/>
+  </g>
+
+  <!-- Grain (ALSO clipped by same mask) -->
+  <g mask="url(#shapeMask)" style="mix-blend-mode: overlay;">
+    <rect width="512" height="512"
+          fill="gray"
+          filter="url(#grain)"
+          opacity="0.35"/>
+  </g>
+
+</svg>

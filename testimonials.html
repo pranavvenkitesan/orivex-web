@@ -1,0 +1,1002 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+
+    <!-- Meta Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page Title -->
+    <title>Testimonials | Orivex - Personal Portfolio HTML Template</title>
+
+    <!-- Meta Tags -->
+    <meta
+      name="description"
+      content="Personal portfolio showcasing my work, services, and projects. Creative professional with expertise in design and development. View my experience, skills, and get in touch."
+    />
+    <meta
+      name="keywords"
+      content="personal portfolio, creative portfolio, web design, graphic design, freelancer, projects, services, about me, contact"
+    />
+    <meta name="author" content="CodePower" />
+
+    <!-- Browser Color -->
+    <meta
+      name="theme-color"
+      content="#f3f3f7"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0d0d0f"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/branding/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="images/branding/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="images/branding/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/branding/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="images/branding/favicon/site.webmanifest" />
+
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <!-- Font Awesome Css-->
+    <link href="css/all.min.css" rel="stylesheet" media="screen" />
+    <!-- Swiper Css-->
+    <link href="css/swiper-bundle.css" rel="stylesheet" media="screen" />
+    <!-- Magnific Popup Css-->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/theme-switcher.css" />
+  </head>
+
+  <body>
+    <!--
+      ==========================================================================
+      Testimonials Page Structure
+      1) Accessibility Helpers
+      2) Global Header / Navigation
+      3) Main Content:
+         - Page Header
+         - Testimonials Grid
+      4) Global Footer
+      5) Vendor & Custom Scripts
+      ==========================================================================
+    -->
+
+    <!-- Preloader Start -->
+    <div
+      id="preloader"
+      class="preloader"
+      role="status"
+      aria-live="polite"
+      aria-busy="true"
+    >
+      <span class="visually-hidden">Loading, please wait</span>
+
+      <div class="preloader__spinner" aria-hidden="true">
+        <span class="preloader__dot"></span>
+        <span class="preloader__dot"></span>
+        <span class="preloader__dot"></span>
+      </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Skip content -->
+    <a href="#main-content" class="visually-hidden">Skip to main content</a>
+
+    <!-- Dot follower -->
+    <div class="follow-dot" aria-hidden="true"></div>
+
+    <!-- ===================================================== -->
+    <!-- Header Section -->
+    <!-- Description: Main navigation header with logo, menu, theme switcher, and CTA -->
+    <!-- Features: Responsive navbar, dropdown menus, mobile menu system, theme toggle -->
+    <!-- Includes: Accessibility support (ARIA), mobile overlay system, submenu controls -->
+    <!-- ===================================================== -->
+
+    <!-- Header Start -->
+    <header class="header-container">
+      <!-- ===================================================== -->
+      <!-- Navigation Wrapper -->
+      <!-- ===================================================== -->
+      <nav class="header-nav" aria-label="Main navigation">
+        <!-- ===================================================== -->
+        <!-- Logo Start -->
+        <!-- ===================================================== -->
+        <a href="index.html" aria-label="Orivex Homepage">
+          <img
+            src="images/branding/logo/logo-main.png"
+            data-light-src="images/branding/logo/logo-main.png"
+            data-dark-src="images/branding/logo/logo-light.png"
+            alt="Orivex Logo"
+            class="header-nav__logo"
+          />
+        </a>
+        <!-- Logo End -->
+
+        <!-- ===================================================== -->
+        <!-- Navigation Menu Container (Desktop + Mobile) -->
+        <!-- ===================================================== -->
+        <div
+          id="menu-container"
+          class="header-nav__menu-wrapper"
+          role="navigation"
+          data-lenis-prevent="true"
+          tabindex="-1"
+          aria-label="Mobile navigation"
+          inert
+        >
+          <!-- ===================================================== -->
+          <!-- Mobile Header (Logo + Close Button) -->
+          <!-- ===================================================== -->
+          <div class="header-nav__mobile-header">
+            <img
+              src="images/branding/logo/logo-main.png"
+              data-light-src="images/branding/logo/logo-main.png"
+              data-dark-src="images/branding/logo/logo-light.png"
+              alt="Orivex Logo"
+              class="header-nav__logo--mobile"
+            />
+
+            <!-- Close Mobile Menu -->
+            <button
+              id="close-menu-button"
+              class="btn btn--outline navbar__menu-button"
+              type="button"
+              aria-label="Close menu"
+              aria-controls="menu-container"
+            >
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </div>
+          <!-- Mobile Header End -->
+
+          <!-- ===================================================== -->
+          <!-- Primary Navigation Menu -->
+          <!-- ===================================================== -->
+          <ul class="header-nav__menu">
+            <!-- ========================= -->
+            <!-- Home Dropdown -->
+            <!-- ========================= -->
+            <li class="navbar__menu-item">
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="submenu-home"
+                data-submenu-toggle
+              >
+                Home
+                <i
+                  class="fa-solid fa-plus header-nav__menu-icon"
+                  aria-hidden="true"
+                ></i>
+              </button>
+
+              <ul
+                id="submenu-home"
+                class="header-nav__submenu"
+                aria-label="Home submenu"
+              >
+                <li><a href="index.html">Web Designer</a></li>
+                <li>
+                  <a href="index-creative-developer.html">Creative Developer</a>
+                </li>
+                <li>
+                  <a href="index-personal-portfolio.html">Personal Portfolio</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- About Link -->
+            <li class="navbar__menu-item">
+              <a href="about.html">About</a>
+            </li>
+
+            <!-- ========================= -->
+            <!-- Services Dropdown -->
+            <!-- ========================= -->
+            <li class="navbar__menu-item">
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="submenu-services"
+                data-submenu-toggle
+              >
+                Services
+                <i
+                  class="fa-solid fa-plus header-nav__menu-icon"
+                  aria-hidden="true"
+                ></i>
+              </button>
+
+              <ul
+                id="submenu-services"
+                class="header-nav__submenu"
+                aria-label="Services submenu"
+              >
+                <li><a href="services-list.html">Services List</a></li>
+                <li><a href="service-details.html">Service Details</a></li>
+              </ul>
+            </li>
+
+            <!-- ========================= -->
+            <!-- Pages Dropdown -->
+            <!-- ========================= -->
+            <li class="navbar__menu-item">
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="submenu-pages"
+                data-submenu-toggle
+              >
+                Pages
+                <i
+                  class="fa-solid fa-plus header-nav__menu-icon"
+                  aria-hidden="true"
+                ></i>
+              </button>
+
+              <ul
+                id="submenu-pages"
+                class="header-nav__submenu"
+                aria-label="Pages submenu"
+              >
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="project-details.html">Project Details</a></li>
+                <li><a href="blog-list.html">Blog List</a></li>
+                <li><a href="blog-details.html">Blog Details</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="404.html">404</a></li>
+              </ul>
+            </li>
+
+            <!-- Contact Link -->
+            <li class="navbar__menu-item">
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- ===================================================== -->
+          <!-- Mobile Extra Info Section -->
+          <!-- ===================================================== -->
+          <div class="header-nav__social-wrapper--mobile">
+            <!-- Contact Info -->
+            <div class="navbar__mobile-contact">
+              <p class="navbar__section-label">Get in Touch</p>
+
+              <div class="navbar__address">
+                <p>USA, California - 90210 Str. Sunset Boulevard 45</p>
+              </div>
+
+              <div class="navbar__phone">
+                <a class="link" href="tel:+1234567890">+1 234 567 890</a>
+              </div>
+
+              <div class="navbar__email">
+                <a class="link" href="mailto:orivex@mail.com"
+                  >orivex@mail.com</a
+                >
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <p class="navbar__section-label">Let's Connect</p>
+
+            <div class="navbar__mobile-social-container">
+              <a
+                href="#"
+                class="btn btn--social"
+                aria-label="Visit our Facebook page"
+              >
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="#"
+                class="btn btn--social"
+                aria-label="Visit our Twitter Profile"
+              >
+                <i class="fab fa-x-twitter" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="#"
+                class="btn btn--social"
+                aria-label="Visit our LinkedIn Profile"
+              >
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="#"
+                class="btn btn--social"
+                aria-label="Visit our Instagram Profile"
+              >
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================== -->
+        <!-- CTA Section -->
+        <!-- ===================================================== -->
+        <div class="header-nav__cta">
+          <!-- Theme Switcher Button -->
+          <button
+            id="theme-switcher-btn"
+            class="theme-switcher"
+            type="button"
+            aria-label="Toggle dark/light theme"
+            aria-pressed="false"
+          >
+            <span class="theme-switcher__icon theme-switcher__icon--light">
+              <i class="fa-solid fa-sun"></i>
+            </span>
+            <span class="theme-switcher__icon theme-switcher__icon--dark">
+              <i class="fa-solid fa-moon"></i>
+            </span>
+          </button>
+
+          <!-- Theme State Inputs -->
+          <input
+            type="radio"
+            id="theme-switcher-light"
+            name="theme"
+            value="light"
+            hidden
+          />
+          <input
+            type="radio"
+            id="theme-switcher-dark"
+            name="theme"
+            value="dark"
+            hidden
+          />
+
+          <!-- Open Menu Button -->
+          <button
+            id="open-menu-button"
+            class="btn btn--outline navbar__menu-button"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="menu-container"
+          >
+            <i class="fa-solid fa-bars-staggered" aria-hidden="true"></i>
+          </button>
+        </div>
+        <!-- CTA End -->
+
+        <!-- Overlay -->
+        <div id="overlay" class="header-nav__overlay" role="presentation"></div>
+      </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- ===================================================== -->
+    <!-- End Header Section -->
+    <!-- ===================================================== -->
+
+    <main id="main-content">
+      <!-- ===================================================== -->
+      <!-- Page Header Start -->
+      <!-- Page intro section with title and breadcrumb navigation -->
+      <!-- ===================================================== -->
+      <div class="page-header">
+        <!-- Container: Page Header Wrapper -->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Page Header Content -->
+              <div class="page-header__content">
+                <!-- Page Title -->
+                <h1>Testimonials<span class="cp-brand-color">.</span></h1>
+
+                <!-- Breadcrumb Navigation -->
+                <nav class="page-header__breadcrumb" aria-label="Breadcrumb">
+                  <ol class="breadcrumb">
+                    <!-- Home Link -->
+                    <li>
+                      <a href="index.html" class="link">Home</a>
+                    </li>
+
+                    <!-- Current Page -->
+                    <li aria-current="page">Testimonials</li>
+                  </ol>
+                </nav>
+                <!-- /Breadcrumb Navigation -->
+              </div>
+              <!-- /Page Header Content -->
+            </div>
+          </div>
+        </div>
+        <!-- /Container -->
+
+        <!-- Decorative Separator -->
+        <div class="page-header__separator"></div>
+      </div>
+      <!-- ===================================================== -->
+      <!-- Page Header End -->
+      <!-- ===================================================== -->
+
+      <!-- One Page Start -->
+      <section class="one-column-page">
+        <div class="container">
+          <div class="row">
+            <!-- Testimonials Grid Start -->
+            <div class="one-column-page__testimonials-grid">
+              <!-- Testimonial Card 01 - Dark Style -->
+              <div class="testimonial__card testimonial__card--dark">
+                <div class="testimonial__author">
+                  <div class="testimonial__author-image">
+                    <img
+                      src="images/sections/testimonials/profile-pic-01.png"
+                      alt="John Doe"
+                    />
+                  </div>
+                  <div class="testimonial__author-info">
+                    <p class="testimonial__author-name">John Doe</p>
+                    <p class="testimonial__author-position">CEO, Company A</p>
+                  </div>
+                </div>
+
+                <div class="testimonial__card-content">
+                  <h3 class="testimonial__card-title">
+                    <span class="cp-gray--modern">A true professional</span>
+                    who inspires confidence<span class="cp-brand-color">.</span>
+                  </h3>
+                  <p class="testimonial__text">
+                    Working with this team has been an absolute pleasure. Their
+                    professionalism and attention to detail exceeded our
+                    expectations, delivering outstanding results every time.
+                  </p>
+                </div>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"
+                  />
+                </svg>
+              </div>
+
+              <!-- Testimonial Card 02 - Bordered -->
+              <div class="testimonial__card testimonial__card--bordered">
+                <div class="testimonial__author">
+                  <div class="testimonial__author-image">
+                    <img
+                      src="images/sections/testimonials/profile-pic-02.png"
+                      alt="Jane Smith"
+                    />
+                  </div>
+                  <div class="testimonial__author-info">
+                    <p class="testimonial__author-name">Dr. Ahmed Rahmani</p>
+                    <p class="testimonial__author-position">
+                      FutureLearn Institute
+                    </p>
+                  </div>
+                </div>
+
+                <div class="testimonial__card-content">
+                  <h3 class="testimonial__card-title">
+                    <span class="cp-gray--modern">Axiom completely</span>
+                    changed how our students engage with learning<span
+                      class="cp-brand-color"
+                      >.</span
+                    >
+                  </h3>
+                  <p class="testimonial__text">
+                    The immersive VR experience makes complex concepts easier to
+                    understand and far more memorable. We've seen a noticeable
+                    improvement in participation and results.
+                  </p>
+                </div>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"
+                  />
+                </svg>
+              </div>
+
+              <!-- Testimonial Card 03 - Bordered -->
+              <div class="testimonial__card testimonial__card--bordered">
+                <div class="testimonial__author">
+                  <div class="testimonial__author-image">
+                    <img
+                      src="images/sections/testimonials/profile-pic-03.png"
+                      alt="Mike Johnson"
+                    />
+                  </div>
+                  <div class="testimonial__author-info">
+                    <p class="testimonial__author-name">Mark Ellison</p>
+                    <p class="testimonial__author-position">
+                      EduCore Solutions
+                    </p>
+                  </div>
+                </div>
+
+                <div class="testimonial__card-content">
+                  <h3 class="testimonial__card-title">
+                    <span class="cp-gray--modern">Innovation backed</span>
+                    by real educational expertise<span class="cp-brand-color"
+                      >.</span
+                    >
+                  </h3>
+                  <p class="testimonial__text">
+                    What impressed us most is how seamlessly Axiom blends
+                    technology with pedagogy. This isnâ€™t just VR for
+                    showâ€”itâ€™s a meaningful learning tool.
+                  </p>
+                </div>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"
+                  />
+                </svg>
+              </div>
+
+              <!-- Testimonial Card 04 - Bordered -->
+              <div class="testimonial__card testimonial__card--bordered">
+                <div class="testimonial__author">
+                  <div class="testimonial__author-image">
+                    <img
+                      src="images/sections/testimonials/profile-pic-04.png"
+                      alt="Sarah Williams"
+                    />
+                  </div>
+                  <div class="testimonial__author-info">
+                    <p class="testimonial__author-name">Bob Benyahia</p>
+                    <p class="testimonial__author-position">Nova Academy</p>
+                  </div>
+                </div>
+
+                <div class="testimonial__card-content">
+                  <h3 class="testimonial__card-title">
+                    <span class="cp-gray--modern">A forward-thinking</span>
+                    platform built for the next generation<span
+                      class="cp-brand-color"
+                      >.</span
+                    >
+                  </h3>
+                  <p class="testimonial__text">
+                    Axiom delivers an experience that feels modern, intuitive,
+                    and genuinely impactful. Our instructors adapted quickly,
+                    and students were excited from day one.
+                  </p>
+                </div>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"
+                  />
+                </svg>
+              </div>
+
+              <!-- Testimonial Card 05 - Dark Style -->
+              <div class="testimonial__card testimonial__card--dark">
+                <div class="testimonial__author">
+                  <div class="testimonial__author-image">
+                    <img
+                      src="images/sections/testimonials/profile-pic-05.png"
+                      alt="David Brown"
+                    />
+                  </div>
+                  <div class="testimonial__author-info">
+                    <p class="testimonial__author-name">James Walker</p>
+                    <p class="testimonial__author-position">
+                      BrightPath Education
+                    </p>
+                  </div>
+                </div>
+
+                <div class="testimonial__card-content">
+                  <h3 class="testimonial__card-title">
+                    <span class="cp-gray--modern">Reliable, scalable,</span>
+                    and truly immersive<span class="cp-brand-color">.</span>
+                  </h3>
+                  <p class="testimonial__text">
+                    From onboarding to daily use, everything has been smooth.
+                    Axiomâ€™s VR environment brings lessons to life in a way
+                    traditional platforms simply canâ€™t.
+                  </p>
+                </div>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- Testimonials Grid End -->
+          </div>
+        </div>
+      </section>
+      <!-- One Page End -->
+    </main>
+
+    <!-- Footer Section Start -->
+    <footer class="footer">
+      <!-- ===================================== -->
+      <!-- Container Start -->
+      <!-- ===================================== -->
+      <div class="container container-footer">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- ===================================== -->
+            <!-- Footer Title Section -->
+            <!-- ===================================== -->
+            <div class="footer__title-wrapper">
+              <!-- Main Heading -->
+              <h2>Let's <span class="brand-gradient">Have a Chat</span></h2>
+
+              <!-- Badge / Decorative Elements -->
+              <!-- Replace assets in: /images/sections/footer/ -->
+              <div class="footer__badge">
+                <img
+                  class="footer__badge-icon"
+                  src="images/sections/footer/footer-chat-dark.svg"
+                  data-light-src="images/sections/footer/footer-chat-dark.svg"
+                  data-dark-src="images/sections/footer/footer-chat-light.svg"
+                  alt="Chat icon"
+                />
+
+                <img
+                  class="footer__badge-img"
+                  src="images/sections/footer/footer-badge-dark.png"
+                  data-light-src="images/sections/footer/footer-badge-dark.png"
+                  data-dark-src="images/sections/footer/footer-badge-light.png"
+                  alt="Quality badge"
+                />
+              </div>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Footer Content Wrapper -->
+            <!-- ===================================== -->
+            <div class="footer__contact-wrapper">
+              <div class="row">
+                <!-- ===================================== -->
+                <!-- LEFT COLUMN: Contact / Links / Social -->
+                <!-- ===================================== -->
+                <div class="col-lg-6 col-md-12">
+                  <div class="footer__items-wrapper">
+                    <div class="footer__items-group">
+                      <!-- ========================= -->
+                      <!-- Contact Section -->
+                      <!-- ========================= -->
+                      <div class="footer__contact-item">
+                        <h3>Contact</h3>
+
+                        <div class="footer__contact-infos">
+                          <!-- Phone -->
+                          <div class="footer__contact-content">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <div class="footer__contact-info-wrapper">
+                              <p>Call Me</p>
+                              <a class="link" href="tel:+1234567890"
+                                >+1 (234) 567-890</a
+                              >
+                            </div>
+                          </div>
+
+                          <!-- Email -->
+                          <div class="footer__contact-content">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div class="footer__contact-info-wrapper">
+                              <p>Need Support</p>
+                              <a class="link" href="mailto:hello@mail.com"
+                                >hello@mail.com</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- ========================= -->
+                      <!-- Quick Links Section -->
+                      <!-- ========================= -->
+                      <div class="footer__contact-item">
+                        <h3>Quick Links</h3>
+
+                        <ul aria-label="Quick links">
+                          <li><a class="link" href="index.html">Home</a></li>
+                          <li><a class="link" href="about.html">About</a></li>
+                          <li>
+                            <a class="link" href="services-list.html"
+                              >Services</a
+                            >
+                          </li>
+                          <li>
+                            <a class="link" href="projects.html">Portfolio</a>
+                          </li>
+                          <li>
+                            <a class="link" href="contact.html">Contact</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- ========================= -->
+                    <!-- Social Links Section -->
+                    <!-- ========================= -->
+                    <div class="footer__social-wrapper">
+                      <div class="footer__contact-item">
+                        <div class="footer__social-container">
+                          <h3>Social</h3>
+
+                          <div class="footer__social-items">
+                            <a
+                              href="#"
+                              class="btn btn--social btn--social-lg"
+                              aria-label="Visit our Facebook page"
+                            >
+                              <i
+                                class="fab fa-facebook-f"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+
+                            <a
+                              href="#"
+                              class="btn btn--social btn--social-lg"
+                              aria-label="Visit our Twitter Profile"
+                            >
+                              <i
+                                class="fab fa-x-twitter"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+
+                            <a
+                              href="#"
+                              class="btn btn--social btn--social-lg"
+                              aria-label="Visit our LinkedIn Profile"
+                            >
+                              <i
+                                class="fab fa-linkedin-in"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+
+                            <a
+                              href="#"
+                              class="btn btn--social btn--social-lg"
+                              aria-label="Visit our Instagram Profile"
+                            >
+                              <i
+                                class="fab fa-instagram"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================== -->
+                <!-- RIGHT COLUMN: Contact Form -->
+                <!-- ===================================== -->
+                <div class="col-lg-6 col-md-12">
+                  <div class="footer__form-wrapper">
+                    <!-- Contact Form -->
+                    <!-- Backend: mail.php -->
+                    <form
+                      action="mail.php"
+                      method="POST"
+                      class="cp-form"
+                      accept-charset="UTF-8"
+                    >
+                      <h4 class="cp-form__title">Say Hi!</h4>
+
+                      <small class="cp-form__note">
+                        Fields with an asterisk (*) are required!
+                      </small>
+
+                      <!-- Honeypot -->
+                      <div class="cp-form-honeypot" aria-hidden="true">
+                        <label for="cp-company-name"
+                          >Leave this field empty</label
+                        >
+                        <input
+                          class="cp-form-control"
+                          id="cp-company-name"
+                          name="company_name"
+                          type="text"
+                          tabindex="-1"
+                          autocomplete="off"
+                        />
+                      </div>
+
+                      <!-- Name -->
+                      <div class="cp-form-group">
+                        <label for="cp-name">
+                          Name <span aria-hidden="true">*</span>
+                        </label>
+                        <input
+                          class="cp-form-control"
+                          id="cp-name"
+                          name="user_name"
+                          type="text"
+                          placeholder="your name"
+                          required
+                        />
+                      </div>
+
+                      <!-- Email -->
+                      <div class="cp-form-group">
+                        <label for="cp-email">
+                          Email <span aria-hidden="true">*</span>
+                        </label>
+                        <input
+                          class="cp-form-control"
+                          id="cp-email"
+                          name="user_email"
+                          type="email"
+                          placeholder="your email"
+                          required
+                        />
+                      </div>
+
+                      <!-- Message -->
+                      <div class="cp-form-group">
+                        <label for="cp-message">
+                          Message <span aria-hidden="true">*</span>
+                        </label>
+                        <textarea
+                          class="cp-form-control"
+                          id="cp-message"
+                          name="user_message"
+                          rows="6"
+                          placeholder="your message"
+                          required
+                        ></textarea>
+                      </div>
+
+                      <!-- Terms Checkbox -->
+                      <div class="cp-form-check">
+                        <input
+                          type="checkbox"
+                          id="checkBox"
+                          name="checkBox"
+                          required
+                          aria-describedby="terms-description"
+                        />
+
+                        <small id="terms-description" class="visually-hidden">
+                          You must accept the terms and conditions before
+                          submitting.
+                        </small>
+
+                        <label for="checkBox">
+                          I agree to the terms and conditions.
+                        </label>
+                      </div>
+
+                      <div class="cp-form-feedback" aria-live="polite"></div>
+
+                      <!-- Submit Button -->
+                      <button type="submit" class="btn-default btn--w-100">
+                        <span class="btn-default-inner">
+                          <span data-hover="Submit Now">Submit Now</span>
+                        </span>
+
+                        <span class="btn-icon">
+                          <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                          ></i>
+                        </span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Footer Copyright -->
+            <!-- ===================================== -->
+            <div class="footer__copyright">
+              <p>&copy; 2026 CodePower. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- To Top Button Start -->
+    <a href="#" id="to-top" class="btn-to-top" aria-label="Back to top">
+      <i class="fa-solid fa-angle-up" aria-hidden="true"></i>
+    </a>
+    <!-- To Top Button End -->
+
+    <!-- Scripts -->
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <!-- GSAP JS -->
+    <script src="js/gsap.min.js" defer></script>
+    <!-- Lenis JS -->
+    <script src="js/lenis.min.js" defer></script>
+    <!-- SplitText JS -->
+    <script src="js/SplitText.min.js" defer></script>
+    <!-- ScrollTrigger JS -->
+    <script src="js/ScrollTrigger.min.js" defer></script>
+    <!-- CustomEase JS -->
+    <script src="js/CustomEase.min.js" defer></script>
+    <!-- Magic Cursor JS -->
+    <script src="js/magic-cursor.js" defer></script>
+    <!-- Nice Select JS -->
+    <script src="js/nice-select.js" defer></script>
+    <!-- Parallaxie JS -->
+    <script src="js/parallaxie.js" defer></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.js" defer></script>
+    <!-- Ukiyo JS -->
+    <script src="js/ukiyo.min.js" defer></script>
+    <!-- Magnific JS -->
+    <script src="js/jquery.magnific-popup.min.js" defer></script>
+
+    <script src="js/script.js" defer></script>
+  </body>
+
+</html>

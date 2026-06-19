@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+  <defs>
+    <!-- Gradient -->
+    <linearGradient id="grad" x1="512" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+
+    <!-- Grain -->
+    <filter id="grain">
+      <feTurbulence baseFrequency="0.6" numOctaves="5" seed="4"/>
+    </filter>
+
+    <!-- Mask (your shape) -->
+    <mask id="shapeMask">
+      <g transform="translate(0,512) scale(0.1,-0.1)" fill="white">
+        
+        <path d="M4765 5113 c-724 -58 -1447 -342 -2070 -812 -144 -108 -230 -184
+        -400 -351 l-150 -148 -120 -6 c-594 -30 -1232 -308 -1668 -727 -83 -80 -87
+        -86 -87 -126 0 -32 7 -50 28 -73 l27 -31 428 -62 427 -62 -59 -67 c-67 -76
+        -80 -111 -57 -160 22 -45 1393 -1414 1430 -1428 46 -17 81 -3 154 60 l67 59
+        60 -417 c43 -298 65 -426 77 -444 24 -36 78 -53 123 -38 62 20 241 229 387
+        450 251 379 412 862 434 1295 l6 120 148 150 c222 226 345 376 508 622 414
+        621 662 1380 662 2021 0 108 -18 154 -66 172 -23 9 -194 11 -289 3z m-1002
+        -938 c207 -44 368 -205 412 -412 8 -37 15 -86 15 -108 0 -189 -125 -391 -292
+        -473 -71 -35 -177 -62 -243 -62 -188 0 -391 126 -473 292 -35 71 -62 177 -62
+        243 0 132 62 277 160 375 131 131 305 183 483 145z"/>
+
+        <path d="M955 1699 c-122 -18 -237 -70 -340 -155 -135 -110 -298 -462 -511
+        -1101 -114 -342 -118 -363 -71 -410 47 -47 69 -43 408 70 640 213 993 377
+        1103 512 223 272 214 638 -22 887 -101 107 -236 176 -388 198 -79 11 -96 11
+        -179 -1z"/>
+
+      </g>
+    </mask>
+  </defs>
+
+  <!-- Gradient layer -->
+  <g mask="url(#shapeMask)">
+    <rect width="512" height="512" fill="url(#grad)"/>
+  </g>
+
+  <!-- Grain layer -->
+  <g mask="url(#shapeMask)" style="mix-blend-mode: overlay;">
+    <rect width="512" height="512" fill="gray" filter="url(#grain)" opacity="0.35"/>
+  </g>
+
+</svg>

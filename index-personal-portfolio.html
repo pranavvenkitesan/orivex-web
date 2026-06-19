@@ -1,0 +1,2548 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+
+    <!-- Meta Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page Title -->
+    <title>
+      Personal Portfolio | Orivex - Personal Portfolio HTML Template
+    </title>
+
+    <!-- Meta Tags -->
+    <meta
+      name="description"
+      content="Personal portfolio showcasing my work, services, and projects. Creative professional with expertise in design and development. View my experience, skills, and get in touch."
+    />
+    <meta
+      name="keywords"
+      content="personal portfolio, creative portfolio, web design, graphic design, freelancer, projects, services, about me, contact"
+    />
+    <meta name="author" content="CodePower" />
+
+    <!-- Browser Color -->
+    <meta
+      name="theme-color"
+      content="#f3f3f7"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0d0d0f"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/branding/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="images/branding/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="images/branding/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/branding/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="images/branding/favicon/site.webmanifest" />
+
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <!-- Font Awesome Css-->
+    <link href="css/all.min.css" rel="stylesheet" media="screen" />
+    <!-- Swiper Css-->
+    <link href="css/swiper-bundle.css" rel="stylesheet" media="screen" />
+    <!-- Magnific Popup Css-->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/theme-switcher.css" />
+  </head>
+
+  <body>
+    <!--
+      ==========================================================================
+      Home Page Structure
+      1) Accessibility Helpers
+      2) Global Header / Navigation
+      3) Main Content:
+         - Hero
+         - About
+         - Scrolling Text
+         - Work
+         - Education
+         - Skills
+         - Tech Stack
+         - Services
+         - Pricing
+         - Blog
+      4) Global Footer
+      5) Utilities (Back to Top)
+      6) Vendor & Custom Scripts
+      ==========================================================================
+    -->
+
+    <!-- Preloader Start -->
+    <div
+      id="preloader"
+      class="preloader"
+      role="status"
+      aria-live="polite"
+      aria-busy="true"
+    >
+      <span class="visually-hidden">Loading, please wait</span>
+
+      <div class="preloader__spinner" aria-hidden="true">
+        <span class="preloader__dot"></span>
+        <span class="preloader__dot"></span>
+        <span class="preloader__dot"></span>
+      </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Skip content -->
+    <a href="#main-content" class="visually-hidden">Skip to main content</a>
+
+    <!-- Dot follower -->
+    <div class="follow-dot" aria-hidden="true"></div>
+
+    <!-- ===================================================== -->
+    <!-- Header Section -->
+    <!-- Description: Main navigation header with logo, menu, theme switcher, and CTA -->
+    <!-- Features: Responsive navbar, dropdown menus, mobile menu system, theme toggle -->
+    <!-- Includes: Accessibility support (ARIA), mobile overlay system, submenu controls -->
+    <!-- ===================================================== -->
+
+    <!-- Header Start -->
+    <header class="header-container">
+      <!-- ===================================================== -->
+      <!-- Navigation Wrapper -->
+      <!-- ===================================================== -->
+      <nav class="header-nav" aria-label="Main navigation">
+        <!-- ===================================================== -->
+        <!-- Logo Start -->
+        <!-- ===================================================== -->
+        <a href="index.html" aria-label="Orivex Homepage">
+          <img
+            src="images/branding/logo/logo-main.png"
+            data-light-src="images/branding/logo/logo-main.png"
+            data-dark-src="images/branding/logo/logo-light.png"
+            alt="Orivex Logo"
+            class="header-nav__logo"
+          />
+        </a>
+        <!-- Logo End -->
+
+        <!-- ===================================================== -->
+        <!-- Navigation Menu Container (Desktop + Mobile) -->
+        <!-- ===================================================== -->
+        <div
+          id="menu-container"
+          class="header-nav__menu-wrapper"
+          role="navigation"
+          data-lenis-prevent="true"
+          tabindex="-1"
+          aria-label="Mobile navigation"
+          inert
+        >
+          <!-- ===================================================== -->
+          <!-- Mobile Header (Logo + Close Button) -->
+          <!-- ===================================================== -->
+          <div class="header-nav__mobile-header">
+            <img
+              src="images/branding/logo/logo-main.png"
+              data-light-src="images/branding/logo/logo-main.png"
+              data-dark-src="images/branding/logo/logo-light.png"
+              alt="Orivex Logo"
+              class="header-nav__logo--mobile"
+            />
+
+            <!-- Close Mobile Menu -->
+            <button
+              id="close-menu-button"
+              class="btn btn--outline navbar__menu-button"
+              type="button"
+              aria-label="Close menu"
+              aria-controls="menu-container"
+            >
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </div>
+          <!-- Mobile Header End -->
+
+          <!-- ===================================================== -->
+          <!-- Primary Navigation Menu -->
+          <!-- ===================================================== -->
+          <ul class="header-nav__menu">
+            <!-- ========================= -->
+            <!-- Home Dropdown -->
+            <!-- ========================= -->
+            <li class="navbar__menu-item">
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="submenu-home"
+                data-submenu-toggle
+              >
+                Home
+                <i
+                  class="fa-solid fa-plus header-nav__menu-icon"
+                  aria-hidden="true"
+                ></i>
+              </button>
+
+              <ul
+                id="submenu-home"
+                class="header-nav__submenu"
+                aria-label="Home submenu"
+              >
+                <li><a href="index.html">Web Designer</a></li>
+                <li>
+                  <a href="index-creative-developer.html">Creative Developer</a>
+                </li>
+                <li>
+                  <a href="index-personal-portfolio.html">Personal Portfolio</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- About Link -->
+            <li class="navbar__menu-item">
+              <a href="about.html">About</a>
+            </li>
+
+            <!-- ========================= -->
+            <!-- Services Dropdown -->
+            <!-- ========================= -->
+            <li class="navbar__menu-item">
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="submenu-services"
+                data-submenu-toggle
+              >
+                Services
+                <i
+                  class="fa-solid fa-plus header-nav__menu-icon"
+                  aria-hidden="true"
+                ></i>
+              </button>
+
+              <ul
+                id="submenu-services"
+                class="header-nav__submenu"
+                aria-label="Services submenu"
+              >
+                <li><a href="services-list.html">Services List</a></li>
+                <li><a href="service-details.html">Service Details</a></li>
+              </ul>
+            </li>
+
+            <!-- ========================= -->
+            <!-- Pages Dropdown -->
+            <!-- ========================= -->
+            <li class="navbar__menu-item">
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="submenu-pages"
+                data-submenu-toggle
+              >
+                Pages
+                <i
+                  class="fa-solid fa-plus header-nav__menu-icon"
+                  aria-hidden="true"
+                ></i>
+              </button>
+
+              <ul
+                id="submenu-pages"
+                class="header-nav__submenu"
+                aria-label="Pages submenu"
+              >
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="project-details.html">Project Details</a></li>
+                <li><a href="blog-list.html">Blog List</a></li>
+                <li><a href="blog-details.html">Blog Details</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="404.html">404</a></li>
+              </ul>
+            </li>
+
+            <!-- Contact Link -->
+            <li class="navbar__menu-item">
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- ===================================================== -->
+          <!-- Mobile Extra Info Section -->
+          <!-- ===================================================== -->
+          <div class="header-nav__social-wrapper--mobile">
+            <!-- Contact Info -->
+            <div class="navbar__mobile-contact">
+              <p class="navbar__section-label">Get in Touch</p>
+
+              <div class="navbar__address">
+                <p>USA, California - 90210 Str. Sunset Boulevard 45</p>
+              </div>
+
+              <div class="navbar__phone">
+                <a class="link" href="tel:+1234567890">+1 234 567 890</a>
+              </div>
+
+              <div class="navbar__email">
+                <a class="link" href="mailto:orivex@mail.com"
+                  >orivex@mail.com</a
+                >
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <p class="navbar__section-label">Let's Connect</p>
+
+            <div class="navbar__mobile-social-container">
+              <a
+                href="#"
+                class="btn btn--social"
+                aria-label="Visit our Facebook page"
+              >
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="#"
+                class="btn btn--social"
+                aria-label="Visit our Twitter Profile"
+              >
+                <i class="fab fa-x-twitter" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="#"
+                class="btn btn--social"
+                aria-label="Visit our LinkedIn Profile"
+              >
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="#"
+                class="btn btn--social"
+                aria-label="Visit our Instagram Profile"
+              >
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================== -->
+        <!-- CTA Section -->
+        <!-- ===================================================== -->
+        <div class="header-nav__cta">
+          <!-- Theme Switcher Button -->
+          <button
+            id="theme-switcher-btn"
+            class="theme-switcher"
+            type="button"
+            aria-label="Toggle dark/light theme"
+            aria-pressed="false"
+          >
+            <span class="theme-switcher__icon theme-switcher__icon--light">
+              <i class="fa-solid fa-sun"></i>
+            </span>
+            <span class="theme-switcher__icon theme-switcher__icon--dark">
+              <i class="fa-solid fa-moon"></i>
+            </span>
+          </button>
+
+          <!-- Theme State Inputs -->
+          <input
+            type="radio"
+            id="theme-switcher-light"
+            name="theme"
+            value="light"
+            hidden
+          />
+          <input
+            type="radio"
+            id="theme-switcher-dark"
+            name="theme"
+            value="dark"
+            hidden
+          />
+
+          <!-- Open Menu Button -->
+          <button
+            id="open-menu-button"
+            class="btn btn--outline navbar__menu-button"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="menu-container"
+          >
+            <i class="fa-solid fa-bars-staggered" aria-hidden="true"></i>
+          </button>
+        </div>
+        <!-- CTA End -->
+
+        <!-- Overlay -->
+        <div id="overlay" class="header-nav__overlay" role="presentation"></div>
+      </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- ===================================================== -->
+    <!-- End Header Section -->
+    <!-- ===================================================== -->
+
+    <main id="main-content">
+      <!-- ===================================================== -->
+      <!-- Hero Section Start -->
+      <!-- Personal portfolio hero layout with intro, profile,
+     CTA, services slider, feature card, and stats -->
+      <!-- ===================================================== -->
+      <section class="hero-personal">
+        <!-- Container: Main Hero Wrapper -->
+        <div class="container">
+          <!-- ===================== -->
+          <!-- Hero Main Layout (Left / Right Split) -->
+          <!-- ===================== -->
+          <div class="hero-personal__layout">
+            <!-- ===================== -->
+            <!-- Left Column: Profile Media -->
+            <!-- ===================== -->
+            <div class="hero-personal__col hero-personal__col--left">
+              <div class="hero-personal__left-media">
+                <!-- Profile Image -->
+                <div class="hero-personal__left-image-wrap">
+                  <img
+                    src="images/hero/portraits/profile-picture.jpg"
+                    alt="Personal portfolio profile portrait"
+                    class="hero-personal__left-image"
+                  />
+                </div>
+
+                <!-- Social Links -->
+                <div class="hero-personal__left-social">
+                  <a
+                    href="#"
+                    class="btn btn--social"
+                    aria-label="Visit our Facebook page"
+                  >
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="btn btn--social"
+                    aria-label="Visit our Twitter Profile"
+                  >
+                    <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="btn btn--social"
+                    aria-label="Visit our LinkedIn Profile"
+                  >
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="btn btn--social"
+                    aria-label="Visit our Instagram Profile"
+                  >
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- /Left Column -->
+
+            <!-- ===================== -->
+            <!-- Right Column: Intro + CTA -->
+            <!-- ===================== -->
+            <div class="hero-personal__col hero-personal__col--right">
+              <!-- Intro Title Block -->
+              <div class="hero-personal__title-wrap">
+                <span class="hero-personal__intro">Hi, I'm</span>
+                <h1>Daniel Whitaker</h1>
+              </div>
+
+              <!-- CTA Block -->
+              <div class="hero-personal__cta-wrap">
+                <a
+                  class="btn-default btn-default--dark"
+                  href="project-details.html"
+                >
+                  <span class="btn-default-inner">
+                    <span data-hover="Featured Project">Featured Project</span>
+                  </span>
+                  <span class="btn-icon">
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </span>
+                </a>
+
+                <p class="hero-personal__cta-text">
+                  Explore cutting-edge projects crafted for impact and
+                  creativity.
+                </p>
+              </div>
+            </div>
+            <!-- /Right Column -->
+          </div>
+          <!-- /Hero Layout -->
+
+          <!-- ===================== -->
+          <!-- Hero Footer Section -->
+          <!-- Services Slider + Feature Card + Stats -->
+          <!-- ===================== -->
+          <div class="hero-personal__footer">
+            <!-- ===================== -->
+            <!-- Footer Column 1: Services Slider -->
+            <!-- ===================== -->
+            <div class="hero-personal__footer-col hero-personal__footer-col--1">
+              <div class="swiper hero-personal__service-swiper">
+                <div class="swiper-wrapper">
+                  <!-- Service Card 1 -->
+                  <div class="swiper-slide">
+                    <article class="hero-personal__service-card">
+                      <img
+                        class="hero-personal__service-bg"
+                        src="images/sections/services/service-img-01.jpg"
+                        alt="Creative web design service"
+                      />
+                      <div
+                        class="hero-personal__service-overlay"
+                        aria-hidden="true"
+                      ></div>
+                      <div class="hero-personal__service-content">
+                        <h2>Creative Branding and Website Strategy Services</h2>
+                        <a href="project-details.html">Discover this service</a>
+                      </div>
+                    </article>
+                  </div>
+
+                  <!-- Service Card 2 -->
+                  <div class="swiper-slide">
+                    <article class="hero-personal__service-card">
+                      <img
+                        class="hero-personal__service-bg"
+                        src="images/sections/services/service-img-02.jpg"
+                        alt="User interface design service"
+                      />
+                      <div
+                        class="hero-personal__service-overlay"
+                        aria-hidden="true"
+                      ></div>
+                      <div class="hero-personal__service-content">
+                        <h2>Modern UI Systems for Product-Led Teams</h2>
+                        <a href="project-details.html">Discover this service</a>
+                      </div>
+                    </article>
+                  </div>
+
+                  <!-- Service Card 3 -->
+                  <div class="swiper-slide">
+                    <article class="hero-personal__service-card">
+                      <img
+                        class="hero-personal__service-bg"
+                        src="images/sections/services/service-img-03.jpg"
+                        alt="Conversion optimization service"
+                      />
+                      <div
+                        class="hero-personal__service-overlay"
+                        aria-hidden="true"
+                      ></div>
+                      <div class="hero-personal__service-content">
+                        <h2>Conversion Focused Landing Pages That Scale</h2>
+                        <a href="project-details.html">Discover this service</a>
+                      </div>
+                    </article>
+                  </div>
+
+                  <!-- Service Card 4 -->
+                  <div class="swiper-slide">
+                    <article class="hero-personal__service-card">
+                      <img
+                        class="hero-personal__service-bg"
+                        src="images/sections/services/service-img-04.jpg"
+                        alt="Brand strategy service"
+                      />
+                      <div
+                        class="hero-personal__service-overlay"
+                        aria-hidden="true"
+                      ></div>
+                      <div class="hero-personal__service-content">
+                        <h2>Brand Experience Design Across Every Touchpoint</h2>
+                        <a href="project-details.html">Discover this service</a>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Footer Column 1 -->
+
+            <!-- ===================== -->
+            <!-- Footer Column 2: Feature Card -->
+            <!-- ===================== -->
+            <div class="hero-personal__footer-col hero-personal__footer-col--2">
+              <div class="hero-personal__feature-card">
+                <span class="hero-personal__feature-icon-wrap">
+                  <img
+                    class="hero-personal__feature-icon"
+                    src="images/icons/features/feature-flask-light.svg"
+                    data-light-src="images/icons/features/feature-flask-light.svg"
+                    data-dark-src="images/icons/features/feature-flask-dark.svg"
+                    alt="Flask icon"
+                  />
+                </span>
+
+                <p class="hero-personal__feature-text">
+                  Experience design that works as hard as you do.
+                </p>
+              </div>
+
+              <!-- Slider Pagination -->
+              <div class="hero-personal__services-pagination"></div>
+            </div>
+            <!-- /Footer Column 2 -->
+
+            <!-- ===================== -->
+            <!-- Footer Column 3: Stats -->
+            <!-- ===================== -->
+            <div class="hero-personal__footer-col hero-personal__footer-col--3">
+              <span class="hero-personal__stats-number">120+</span>
+
+              <p class="hero-personal__stats-text">
+                Projects Delivered Driving Measurable Client Growth.
+              </p>
+            </div>
+            <!-- /Footer Column 3 -->
+          </div>
+          <!-- /Hero Footer -->
+        </div>
+        <!-- /Container -->
+      </section>
+      <!-- ===================================================== -->
+      <!-- Hero Section End -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- About Section Start -->
+      <!-- Personal about section with profile highlights,
+     achievements, video intro, CV download, and scrolling keywords -->
+      <!-- ===================================================== -->
+      <div class="about-personal">
+        <!-- Container: Main Layout Wrapper -->
+        <div class="container">
+          <!-- ===================== -->
+          <!-- Main Grid Layout -->
+          <!-- Left: badges & stats | Right: content -->
+          <!-- ===================== -->
+          <div class="about-personal__grid">
+            <!-- ===================== -->
+            <!-- Left Column: Awards + Status -->
+            <!-- ===================== -->
+            <div class="about-personal__left">
+              <!-- Badge + Icon Wrapper -->
+              <div class="about-personal__left-badge-wrap">
+                <!-- Decorative Badge -->
+                <img
+                  src="images/sections/about/badge-about-dark.png"
+                  data-light-src="images/sections/about/badge-about-dark.png"
+                  data-dark-src="images/sections/about/badge-about-light.png"
+                  alt="Badge decoration"
+                  class="about-personal__left-badge"
+                />
+
+                <!-- Award Icon -->
+                <img
+                  class="badge-rotator__icon about-personal__left-badge-icon"
+                  src="images/hero/decor/hero-award-icon-dark.svg"
+                  data-light-src="images/hero/decor/hero-award-icon-dark.svg"
+                  data-dark-src="images/hero/decor/hero-award-icon-light.svg"
+                  alt="Award icon"
+                />
+              </div>
+
+              <!-- Stats + Availability -->
+              <div class="about-personal__details">
+                <!-- Awards Counter -->
+                <div class="about-personal__awards">
+                  <strong>30+</strong>
+                  <span>Awards and Recognition</span>
+                </div>
+
+                <!-- Freelance Availability Badge -->
+                <div class="about-personal__freelance-badge">
+                  <span>Available for Freelance</span>
+                </div>
+              </div>
+            </div>
+            <!-- /Left Column -->
+
+            <!-- ===================== -->
+            <!-- Right Column: Content -->
+            <!-- ===================== -->
+            <div class="about-personal__content">
+              <!-- ===================== -->
+              <!-- Video Preview Block -->
+              <!-- ===================== -->
+              <div class="about-personal__video">
+                <!-- Video Thumbnail -->
+                <img
+                  src="images/sections/about/about-page-img-03.jpg"
+                  alt="Play video"
+                  class="about-personal__video-img"
+                />
+
+                <!-- Play Button (Popup Video Trigger) -->
+                <a
+                  href="https://www.youtube.com/watch?v=nqye02H_H6I"
+                  class="btn btn--circle btn--borderless btn--circle-small popup-video"
+                  aria-label="Play introduction video"
+                >
+                  <i class="fa-solid fa-play" aria-hidden="true"></i>
+                </a>
+              </div>
+              <!-- /Video Block -->
+
+              <!-- About Description Text -->
+              <p>
+                I craft modern web experiences by blending design precision with
+                technical expertise,
+                <span class="cp-brand-color">
+                  creating interfaces that engage users and deliver real impact.
+                </span>
+              </p>
+
+              <!-- CV Download Button -->
+              <a
+                href="docs/daniel-whitaker-cv.pdf"
+                class="btn-default btn-default--gray"
+              >
+                <span class="btn-default-inner">
+                  <span data-hover="Download CV">Download CV</span>
+                </span>
+                <span class="btn-icon">
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </span>
+              </a>
+            </div>
+            <!-- /Right Column -->
+          </div>
+          <!-- /Grid Layout -->
+        </div>
+        <!-- /Container -->
+
+        <!-- ===================== -->
+        <!-- Scrolling Keywords Section -->
+        <!-- Decorative animated text strip -->
+        <!-- ===================== -->
+        <div class="scrolling-text">
+          <div class="scrolling-text__container scrolling-text__container--alt">
+            <!-- Scrolling Line 1 -->
+            <div class="scrolling-text__content">
+              <span>
+                <span class="scrolling-text__separator-wrapper">
+                  <span class="scrolling-text__icon">
+                    <i class="fa-solid fa-star-of-life"></i>
+                  </span>
+                </span>
+                UX/UI
+              </span>
+              <span>
+                <span class="scrolling-text__separator-wrapper">
+                  <span class="scrolling-text__icon">
+                    <i class="fa-solid fa-star-of-life"></i>
+                  </span>
+                </span>
+                Design
+              </span>
+              <span>
+                <span class="scrolling-text__separator-wrapper">
+                  <span class="scrolling-text__icon">
+                    <i class="fa-solid fa-star-of-life"></i>
+                  </span>
+                </span>
+                Landing
+              </span>
+              <span>
+                <span class="scrolling-text__separator-wrapper">
+                  <span class="scrolling-text__icon">
+                    <i class="fa-solid fa-star-of-life"></i>
+                  </span>
+                </span>
+                Optimization
+              </span>
+              <span>
+                <span class="scrolling-text__separator-wrapper">
+                  <span class="scrolling-text__icon">
+                    <i class="fa-solid fa-star-of-life"></i>
+                  </span>
+                </span>
+                Performance
+              </span>
+              <span>
+                <span class="scrolling-text__separator-wrapper">
+                  <span class="scrolling-text__icon">
+                    <i class="fa-solid fa-star-of-life"></i>
+                  </span>
+                </span>
+                Branding
+              </span>
+              <span>
+                <span class="scrolling-text__separator-wrapper">
+                  <span class="scrolling-text__icon">
+                    <i class="fa-solid fa-star-of-life"></i>
+                  </span>
+                </span>
+                Redesign
+              </span>
+              <span>
+                <span class="scrolling-text__separator-wrapper">
+                  <span class="scrolling-text__icon">
+                    <i class="fa-solid fa-star-of-life"></i>
+                  </span>
+                </span>
+                Conversions
+              </span>
+            </div>
+
+            <!-- Scrolling Line 2 (Duplicate for loop effect) -->
+            <div class="scrolling-text__content">
+              <!-- Same content repeated for infinite scroll effect -->
+              <!-- (kept identical intentionally for animation continuity) -->
+              <span>... (same structure repeated) ...</span>
+            </div>
+          </div>
+        </div>
+        <!-- /Scrolling Keywords -->
+      </div>
+      <!-- ===================================================== -->
+      <!-- About Section End -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- Work Experience Section Start -->
+      <!-- Professional timeline showcasing roles, responsibilities,
+     and career progression in a structured layout -->
+      <!-- ===================================================== -->
+      <section class="work">
+        <!-- Container: Section Wrapper -->
+        <div class="container">
+          <!-- =============================== -->
+          <!-- Section Header -->
+          <!-- =============================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Section Title -->
+              <div class="section-title align-items-center w-100">
+                <h2>
+                  <span class="cp-gray--modern">Work</span> Experience
+                  <span class="cp-brand-color">.</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================== -->
+          <!-- Work Experience Content -->
+          <!-- =============================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Timeline Wrapper -->
+              <div class="work__content">
+                <!-- ================================================= -->
+                <!-- Experience Item 01 -->
+                <!-- ================================================= -->
+                <div class="data-row">
+                  <div class="row align-items-center">
+                    <!-- Index Number -->
+                    <div class="col-lg-1">
+                      <div class="data-row__number">01</div>
+                    </div>
+
+                    <!-- Job Details -->
+                    <div class="col-lg-6">
+                      <!-- Job Title -->
+                      <h3 class="data-row__title">
+                        Senior Front-End Developer
+                      </h3>
+
+                      <!-- Job Description -->
+                      <p class="data-row__description">
+                        Led the development of responsive web interfaces,
+                        focusing on performance, accessibility, and
+                        pixel-perfect implementation across modern browsers.
+                      </p>
+
+                      <!-- Tech Tags -->
+                      <div class="data-row__tags">
+                        <span class="tag tag--gray">React</span>
+                        <span class="tag tag--gray">Accessibility</span>
+                        <span class="tag tag--gray">Performance</span>
+                      </div>
+                    </div>
+
+                    <!-- Company -->
+                    <div class="col-lg-3">
+                      <div class="data-row__meta">Creative Studio Agency</div>
+                    </div>
+
+                    <!-- Duration -->
+                    <div class="col-lg-2">
+                      <div class="data-row__date-simple">2023 - Present</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ================================================= -->
+                <!-- Experience Item 02 -->
+                <!-- ================================================= -->
+                <div class="data-row">
+                  <div class="row align-items-center">
+                    <div class="col-lg-1">
+                      <div class="data-row__number">02</div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <h3 class="data-row__title">Full-Stack Developer</h3>
+                      <p class="data-row__description">
+                        Built scalable web applications using modern frameworks,
+                        integrating APIs and optimizing backend performance for
+                        seamless user experiences.
+                      </p>
+
+                      <div class="data-row__tags">
+                        <span class="tag tag--gray">APIs</span>
+                        <span class="tag tag--gray">Node.js</span>
+                        <span class="tag tag--gray">Architecture</span>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                      <div class="data-row__meta">SaaS Platform</div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="data-row__date-simple">2022 - 2023</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ================================================= -->
+                <!-- Experience Item 03 -->
+                <!-- ================================================= -->
+                <div class="data-row">
+                  <div class="row align-items-center">
+                    <div class="col-lg-1">
+                      <div class="data-row__number">03</div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <h3 class="data-row__title">UI/UX Designer</h3>
+                      <p class="data-row__description">
+                        Designed intuitive user interfaces and improved user
+                        journeys through research, wireframing, and
+                        high-fidelity prototyping.
+                      </p>
+
+                      <div class="data-row__tags">
+                        <span class="tag tag--gray">UX Research</span>
+                        <span class="tag tag--gray">Wireframes</span>
+                        <span class="tag tag--gray">Figma</span>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                      <div class="data-row__meta">Digital Product Lab</div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="data-row__date-simple">2021 - 2022</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ================================================= -->
+                <!-- Experience Item 04 -->
+                <!-- ================================================= -->
+                <div class="data-row">
+                  <div class="row align-items-center">
+                    <div class="col-lg-1">
+                      <div class="data-row__number">04</div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <h3 class="data-row__title">Web Developer</h3>
+                      <p class="data-row__description">
+                        Developed and maintained client websites, ensuring clean
+                        code structure, fast load times, and cross-device
+                        compatibility.
+                      </p>
+
+                      <div class="data-row__tags">
+                        <span class="tag tag--gray">HTML</span>
+                        <span class="tag tag--gray">CSS</span>
+                        <span class="tag tag--gray">Responsive</span>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                      <div class="data-row__meta">Freelance Projects</div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="data-row__date-simple">2020 - 2021</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ================================================= -->
+                <!-- Experience Item 05 -->
+                <!-- ================================================= -->
+                <div class="data-row">
+                  <div class="row align-items-center">
+                    <div class="col-lg-1">
+                      <div class="data-row__number">05</div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <h3 class="data-row__title">Junior Web Designer</h3>
+                      <p class="data-row__description">
+                        Assisted in crafting visually engaging layouts while
+                        learning best practices in modern web design and
+                        front-end development.
+                      </p>
+
+                      <div class="data-row__tags">
+                        <span class="tag tag--gray">Layouts</span>
+                        <span class="tag tag--gray">UI Design</span>
+                        <span class="tag tag--gray">Frontend</span>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                      <div class="data-row__meta">Startup Environment</div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="data-row__date-simple">2019 - 2020</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Timeline Wrapper -->
+            </div>
+          </div>
+        </div>
+        <!-- /Container -->
+
+        <!-- Section Divider -->
+        <div class="section-separator"></div>
+      </section>
+      <!-- ===================================================== -->
+      <!-- Work Experience Section End -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- Education Section Start -->
+      <!-- Academic background and certifications presented in a structured timeline format -->
+      <!-- ===================================================== -->
+      <section class="education">
+        <!-- Container: Section Wrapper -->
+        <div class="container">
+          <!-- =============================== -->
+          <!-- Section Header -->
+          <!-- =============================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Section Title -->
+              <div class="section-title align-items-center w-100">
+                <h2>
+                  Education
+                  <span class="cp-brand-color">.</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================== -->
+          <!-- Education Content -->
+          <!-- =============================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Timeline Wrapper -->
+              <div class="education__content">
+                <!-- ================================================= -->
+                <!-- Education Item 01 -->
+                <!-- ================================================= -->
+                <div class="data-row">
+                  <div class="row align-items-center">
+                    <!-- Index -->
+                    <div class="col-lg-1">
+                      <div class="data-row__number">01</div>
+                    </div>
+
+                    <!-- Study Details -->
+                    <div class="col-lg-6">
+                      <!-- Degree Title -->
+                      <h3 class="data-row__title">
+                        Masterâ€™s Degree in Computer Science
+                      </h3>
+
+                      <!-- Description -->
+                      <p class="data-row__description">
+                        Specialized in software engineering and web
+                        technologies, focusing on scalable systems, modern
+                        frameworks, and advanced application architecture.
+                      </p>
+
+                      <!-- Focus Areas -->
+                      <div class="data-row__tags">
+                        <span class="tag tag--gray">Systems</span>
+                        <span class="tag tag--gray">Frameworks</span>
+                        <span class="tag tag--gray">Architecture</span>
+                      </div>
+                    </div>
+
+                    <!-- Institution -->
+                    <div class="col-lg-3">
+                      <div class="data-row__meta">University of Technology</div>
+                    </div>
+
+                    <!-- Duration -->
+                    <div class="col-lg-2">
+                      <div class="data-row__date-simple">2017 - 2019</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ================================================= -->
+                <!-- Education Item 02 -->
+                <!-- ================================================= -->
+                <div class="data-row">
+                  <div class="row align-items-center">
+                    <div class="col-lg-1">
+                      <div class="data-row__number">02</div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <h3 class="data-row__title">
+                        Bachelorâ€™s Degree in Information Technology
+                      </h3>
+
+                      <p class="data-row__description">
+                        Built a strong foundation in programming, databases, and
+                        web development, with hands-on projects in full-stack
+                        application development.
+                      </p>
+
+                      <div class="data-row__tags">
+                        <span class="tag tag--gray">Programming</span>
+                        <span class="tag tag--gray">Databases</span>
+                        <span class="tag tag--gray">Full Stack</span>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                      <div class="data-row__meta">
+                        Faculty of Computer Science
+                      </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="data-row__date-simple">2015 - 2017</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ================================================= -->
+                <!-- Education Item 03 -->
+                <!-- ================================================= -->
+                <div class="data-row">
+                  <div class="row align-items-center">
+                    <div class="col-lg-1">
+                      <div class="data-row__number">03</div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <h3 class="data-row__title">
+                        Web Development Certification
+                      </h3>
+
+                      <p class="data-row__description">
+                        Completed intensive training in front-end and back-end
+                        development, covering modern tools, responsive design,
+                        and best coding practices.
+                      </p>
+
+                      <div class="data-row__tags">
+                        <span class="tag tag--gray">Frontend</span>
+                        <span class="tag tag--gray">Backend</span>
+                        <span class="tag tag--gray">Best Practices</span>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                      <div class="data-row__meta">Online Learning Platform</div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="data-row__date-simple">2014 - 2015</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Timeline Wrapper -->
+            </div>
+          </div>
+        </div>
+        <!-- /Container -->
+
+        <!-- Section Divider -->
+        <div class="section-separator"></div>
+      </section>
+      <!-- ===================================================== -->
+      <!-- Education Section End -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- Skills Section Start -->
+      <!-- Technical and professional skillset represented with animated progress indicators -->
+      <!-- ===================================================== -->
+      <section class="skills">
+        <!-- Container: Section Wrapper -->
+        <div class="container">
+          <!-- =============================== -->
+          <!-- Section Header -->
+          <!-- =============================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Section Title -->
+              <div class="section-title align-items-center w-100">
+                <h2>
+                  Skills
+                  <span class="cp-brand-color">.</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================== -->
+          <!-- Skills Content -->
+          <!-- =============================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Skills Wrapper (Progress System) -->
+              <div class="skills__content skills-progress-bar">
+                <!-- =============================== -->
+                <!-- Skills Column -->
+                <!-- =============================== -->
+                <div class="skills__column">
+                  <!-- Column Title -->
+                  <h3 class="skills__column-title">
+                    Development & Delivery
+                    <span class="cp-brand-color">.</span>
+                  </h3>
+
+                  <!-- ================================================= -->
+                  <!-- Skill Item 01 -->
+                  <!-- ================================================= -->
+                  <div class="skills__item">
+                    <!-- Skill Header -->
+                    <div class="skills__item-head">
+                      <span class="skills__item-name">HTML / CSS</span>
+                      <span class="skills__item-value">96%</span>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="skills__progress skillbar" data-percent="96%">
+                      <span
+                        class="skills__progress-bar count-bar"
+                        data-progress="96"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <!-- ================================================= -->
+                  <!-- Skill Item 02 -->
+                  <!-- ================================================= -->
+                  <div class="skills__item">
+                    <div class="skills__item-head">
+                      <span class="skills__item-name">JavaScript</span>
+                      <span class="skills__item-value">89%</span>
+                    </div>
+
+                    <div class="skills__progress skillbar" data-percent="89%">
+                      <span
+                        class="skills__progress-bar count-bar"
+                        data-progress="89"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <!-- ================================================= -->
+                  <!-- Skill Item 03 -->
+                  <!-- ================================================= -->
+                  <div class="skills__item">
+                    <div class="skills__item-head">
+                      <span class="skills__item-name">Responsive Design</span>
+                      <span class="skills__item-value">94%</span>
+                    </div>
+
+                    <div class="skills__progress skillbar" data-percent="94%">
+                      <span
+                        class="skills__progress-bar count-bar"
+                        data-progress="94"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <!-- ================================================= -->
+                  <!-- Skill Item 04 -->
+                  <!-- ================================================= -->
+                  <div class="skills__item">
+                    <div class="skills__item-head">
+                      <span class="skills__item-name"
+                        >Performance Optimisation</span
+                      >
+                      <span class="skills__item-value">85%</span>
+                    </div>
+
+                    <div class="skills__progress skillbar" data-percent="85%">
+                      <span
+                        class="skills__progress-bar count-bar"
+                        data-progress="85"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <!-- ================================================= -->
+                  <!-- Skill Item 05 -->
+                  <!-- ================================================= -->
+                  <div class="skills__item">
+                    <div class="skills__item-head">
+                      <span class="skills__item-name">Project Delivery</span>
+                      <span class="skills__item-value">91%</span>
+                    </div>
+
+                    <div class="skills__progress skillbar" data-percent="91%">
+                      <span
+                        class="skills__progress-bar count-bar"
+                        data-progress="91"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Skills Column -->
+              </div>
+              <!-- /Skills Content -->
+            </div>
+          </div>
+        </div>
+        <!-- /Container -->
+
+        <!-- Section Divider -->
+        <div class="section-separator"></div>
+      </section>
+      <!-- ===================================================== -->
+      <!-- Skills Section End -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- Tech Stack Section Start -->
+      <!-- Tools, technologies, and development workflow showcase -->
+      <!-- ===================================================== -->
+      <section class="tech-stack">
+        <!-- Container: Tech Stack Wrapper -->
+        <div class="container">
+          <div class="row">
+            <!-- ===================== -->
+            <!-- Left Column: Section Heading -->
+            <!-- ===================== -->
+            <div class="col-lg-4 tech-stack__col-wrapper">
+              <div class="tech-stack__col">
+                <div class="section-title section-title--full">
+                  <!-- Pre Title -->
+                  <div class="pre-title">
+                    <div class="pre-title__icon-wrap">
+                      <img
+                        class="pre-title__icon"
+                        src="images/branding/badges/title-shape-dark.svg"
+                        data-light-src="images/branding/badges/title-shape-dark.svg"
+                        data-dark-src="images/branding/badges/title-shape-light.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <span class="pre-title__label">Tech Stack</span>
+                  </div>
+
+                  <!-- Section Title -->
+                  <h2>
+                    <span class="cp-gray--modern">Stack.</span> Tools. Flow
+                    <span class="cp-brand-color">.</span>
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            <!-- ===================== -->
+            <!-- Right Column: Tech Items Grid -->
+            <!-- ===================== -->
+            <div class="col-lg-8">
+              <div class="tech-stack__items">
+                <!-- Tech Item 01 -->
+                <div class="tech-stack__item">
+                  <div class="tech-stack__item-head">
+                    <div class="tech-stack__item-title">TypeScript</div>
+                    <hr class="tech-stack__item-line" />
+                  </div>
+                  <img
+                    src="images/sections/tech/brands/ts-logo.svg"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <!-- Tech Item 02 -->
+                <div class="tech-stack__item">
+                  <div class="tech-stack__item-head">
+                    <div class="tech-stack__item-title">React</div>
+                    <hr class="tech-stack__item-line" />
+                  </div>
+                  <img
+                    src="images/sections/tech/brands/react-logo.svg"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <!-- Tech Item 03 -->
+                <div class="tech-stack__item">
+                  <div class="tech-stack__item-head">
+                    <div class="tech-stack__item-title">Node.js</div>
+                    <hr class="tech-stack__item-line" />
+                  </div>
+                  <img
+                    src="images/sections/tech/brands/nodejs-logo.svg"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <!-- Tech Item 04 -->
+                <div class="tech-stack__item">
+                  <div class="tech-stack__item-head">
+                    <div class="tech-stack__item-title">HTML5</div>
+                    <hr class="tech-stack__item-line" />
+                  </div>
+                  <img
+                    src="images/sections/tech/brands/html5-logo.svg"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <!-- Tech Item 05 -->
+                <div class="tech-stack__item">
+                  <div class="tech-stack__item-head">
+                    <div class="tech-stack__item-title">CSS3</div>
+                    <hr class="tech-stack__item-line" />
+                  </div>
+                  <img
+                    src="images/sections/tech/brands/css3-logo.svg"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <!-- Tech Item 06 -->
+                <div class="tech-stack__item">
+                  <div class="tech-stack__item-head">
+                    <div class="tech-stack__item-title">Sass</div>
+                    <hr class="tech-stack__item-line" />
+                  </div>
+                  <img
+                    src="images/sections/tech/brands/sass-logo.svg"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <!-- Tech Item 07 -->
+                <div class="tech-stack__item">
+                  <div class="tech-stack__item-head">
+                    <div class="tech-stack__item-title">Tailwind</div>
+                    <hr class="tech-stack__item-line" />
+                  </div>
+                  <img
+                    src="images/sections/tech/brands/tailwind-logo.svg"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <!-- Tech Item 08 -->
+                <div class="tech-stack__item">
+                  <div class="tech-stack__item-head">
+                    <div class="tech-stack__item-title">Git</div>
+                    <hr class="tech-stack__item-line" />
+                  </div>
+                  <img
+                    src="images/sections/tech/brands/git-logo.svg"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <!-- Tech Item 09 -->
+                <div class="tech-stack__item">
+                  <div class="tech-stack__item-head">
+                    <div class="tech-stack__item-title">Javascript</div>
+                    <hr class="tech-stack__item-line" />
+                  </div>
+                  <img
+                    src="images/sections/tech/brands/js-logo.svg"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <!-- /Tech Items Grid -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Divider -->
+        <div class="section-separator"></div>
+      </section>
+      <!-- ===================================================== -->
+      <!-- Tech Stack Section End -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- Services Section -->
+      <!-- Description: Displays list of services with images and sub-features -->
+      <!-- Features: Numbered items, hover-ready layout, service details links -->
+      <!-- Customize: Titles, images, sub-services, and links -->
+      <!-- ===================================================== -->
+
+      <section class="services">
+        <!-- Container Start -->
+        <div class="container">
+          <!-- ===================================== -->
+          <!-- Section Header -->
+          <!-- ===================================== -->
+          <div class="row">
+            <!-- Pre-title Column -->
+            <div class="col-lg-4">
+              <!-- Pre-title -->
+              <div class="pre-title">
+                <!-- Icon -->
+                <!-- Replace icon in: /images/branding/badges/ -->
+                <div class="pre-title__icon-wrap">
+                  <img
+                    class="pre-title__icon"
+                    src="images/branding/badges/title-shape-dark.svg"
+                    data-light-src="images/branding/badges/title-shape-dark.svg"
+                    data-dark-src="images/branding/badges/title-shape-light.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+
+                <!-- Label -->
+                <!-- Editable Text -->
+                <span class="pre-title__label">How I Help</span>
+              </div>
+            </div>
+
+            <!-- Title Column -->
+            <div class="col-lg-8">
+              <!-- Section Title -->
+              <!-- Editable Content Start -->
+              <div class="section-title">
+                <h2>
+                  <span class="cp-gray--modern">Turning Your</span>
+                  Ideas Into Results-Driven Websites
+                  <span class="cp-brand-color">.</span>
+                </h2>
+              </div>
+              <!-- Editable Content End -->
+            </div>
+          </div>
+
+          <!-- ===================================== -->
+          <!-- Services List -->
+          <!-- ===================================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Services Wrapper -->
+              <div class="services__wrapper">
+                <!-- ===================================================== -->
+                <!-- Service Item 01 -->
+                <!-- Customize: Title, image, list items, and link -->
+                <!-- ===================================================== -->
+                <div class="service__item">
+                  <div class="row align-items-center">
+                    <!-- Service Number -->
+                    <div class="col-lg-2">
+                      <div class="service__item-number">1.</div>
+                    </div>
+
+                    <!-- Service Content -->
+                    <div class="col-lg-8">
+                      <div class="service__item-content">
+                        <!-- Service Title -->
+                        <h3 class="service__item-title">UI / UX Design</h3>
+
+                        <!-- Service Details Wrapper -->
+                        <div class="services__sub-wrapper">
+                          <!-- Service Image -->
+                          <!-- Replace image in: /images/sections/services/ -->
+                          <img
+                            class="service__item-img"
+                            src="images/sections/services/service-img-01.jpg"
+                            alt="UI / UX Design"
+                            loading="lazy"
+                            decoding="async"
+                          />
+
+                          <!-- Sub Services List -->
+                          <ul class="service__sub-service">
+                            <li>User Research</li>
+                            <li>Wireframing & Prototyping</li>
+                            <li>Interface Design (UI)</li>
+                            <li>Usability Testing</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Service Link -->
+                    <div class="col-lg-2">
+                      <div class="service__item-icon">
+                        <!-- Link to Service Details Page -->
+                        <!-- Update href to match your page -->
+                        <a
+                          href="service-details.html"
+                          aria-label="View UI / UX Design service details"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Service Item 02 -->
+                <!-- ===================================================== -->
+                <div class="service__item">
+                  <div class="row align-items-center">
+                    <div class="col-lg-2">
+                      <div class="service__item-number">2.</div>
+                    </div>
+
+                    <div class="col-lg-8">
+                      <div class="service__item-content">
+                        <h3 class="service__item-title">Landing Page Design</h3>
+
+                        <div class="services__sub-wrapper">
+                          <!-- Replace image -->
+                          <img
+                            class="service__item-img"
+                            src="images/sections/services/service-img-02.jpg"
+                            alt="Landing Page Design"
+                            loading="lazy"
+                            decoding="async"
+                          />
+
+                          <ul class="service__sub-service">
+                            <li>Conversion-Focused Layouts</li>
+                            <li>Visual Storytelling</li>
+                            <li>Copy-Design Alignment</li>
+                            <li>A/B-Ready Design</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="service__item-icon">
+                        <a
+                          href="service-details.html"
+                          aria-label="View Landing Page Design service details"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Service Item 03 -->
+                <!-- ===================================================== -->
+                <div class="service__item">
+                  <div class="row align-items-center">
+                    <div class="col-lg-2">
+                      <div class="service__item-number">3.</div>
+                    </div>
+
+                    <div class="col-lg-8">
+                      <div class="service__item-content">
+                        <h3 class="service__item-title">
+                          Website Redesign & Improvements
+                        </h3>
+
+                        <div class="services__sub-wrapper">
+                          <img
+                            class="service__item-img"
+                            src="images/sections/services/service-img-03.jpg"
+                            alt="Website Redesign & Improvements"
+                            loading="lazy"
+                            decoding="async"
+                          />
+
+                          <ul class="service__sub-service">
+                            <li>UX & UI Audit</li>
+                            <li>Information Architecture</li>
+                            <li>Visual Refresh</li>
+                            <li>Mobile & Accessibility Improvements</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="service__item-icon">
+                        <a
+                          href="service-details.html"
+                          aria-label="View Website Redesign & Improvements service details"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- Service Item 04 -->
+                <!-- ===================================================== -->
+                <div class="service__item">
+                  <div class="row align-items-center">
+                    <div class="col-lg-2">
+                      <div class="service__item-number">4.</div>
+                    </div>
+
+                    <div class="col-lg-8">
+                      <div class="service__item-content">
+                        <h3 class="service__item-title">
+                          Website Optimization
+                        </h3>
+
+                        <div class="services__sub-wrapper">
+                          <img
+                            class="service__item-img"
+                            src="images/sections/services/service-img-04.jpg"
+                            alt="Website Optimization"
+                            loading="lazy"
+                            decoding="async"
+                          />
+
+                          <ul class="service__sub-service">
+                            <li>Performance Optimization</li>
+                            <li>Conversion Rate Optimization (CRO)</li>
+                            <li>UX Friction Reduction</li>
+                            <li>SEO-Friendly Design Improvements</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <div class="service__item-icon">
+                        <a
+                          href="service-details.html"
+                          aria-label="View Website Optimization service details"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Services Wrapper -->
+            </div>
+          </div>
+        </div>
+        <!-- /Container -->
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- End Services Section -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- Pricing Section Start -->
+      <!-- Service pricing plans displayed in a vertical card layout -->
+      <!-- ===================================================== -->
+      <section class="pricing-vertical">
+        <!-- Container: Section Wrapper -->
+        <div class="container">
+          <!-- =============================== -->
+          <!-- Section Header -->
+          <!-- =============================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Section Title -->
+              <div class="section-title text-center section-title--full">
+                <h2>
+                  Pricing
+                  <span class="cp-brand-color">.</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================== -->
+          <!-- Pricing Content -->
+          <!-- =============================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Pricing Cards Wrapper -->
+              <div class="pricing-vertical__wrapper">
+                <!-- ================================================= -->
+                <!-- Pricing Plan 01 -->
+                <!-- ================================================= -->
+                <article class="pricing-vertical__item">
+                  <!-- Plan Header -->
+                  <div class="pricing-vertical__header">
+                    <div class="pricing-vertical__title">Basic Plan</div>
+                    <h3>$10<span>/mo</span></h3>
+                  </div>
+
+                  <!-- Plan Features -->
+                  <div class="pricing-vertical__body">
+                    <ul>
+                      <li>Single landing page</li>
+                      <li>Responsive layout</li>
+                      <li>Basic SEO setup</li>
+                      <li>1 round of revisions</li>
+                    </ul>
+                  </div>
+
+                  <!-- Call To Action -->
+                  <div class="pricing-vertical__footer">
+                    <a
+                      class="btn-default btn-default--small-border-dark"
+                      href="contact.html"
+                      aria-label="Choose the Basic Plan"
+                    >
+                      <span class="btn-default-inner">
+                        <span data-hover="Submit Now">Submit Now</span>
+                      </span>
+                      <span class="btn-icon">
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </a>
+                  </div>
+                </article>
+
+                <!-- ================================================= -->
+                <!-- Pricing Plan 02 (Featured) -->
+                <!-- ================================================= -->
+                <article class="pricing-vertical__item">
+                  <!-- Featured Badge -->
+                  <div class="pricing-vertical__badge">Best Value</div>
+
+                  <div class="pricing-vertical__header">
+                    <div class="pricing-vertical__title">Business Plan</div>
+                    <h3>$24<span>/mo</span></h3>
+                  </div>
+
+                  <div class="pricing-vertical__body">
+                    <ul>
+                      <li>Up to 5 pages</li>
+                      <li>Custom sections & animations</li>
+                      <li>On-page SEO + analytics</li>
+                      <li>2 rounds of revisions</li>
+                    </ul>
+                  </div>
+
+                  <div class="pricing-vertical__footer">
+                    <a
+                      class="btn-default btn-default--small-border-dark"
+                      href="contact.html"
+                      aria-label="Choose the Business Plan"
+                    >
+                      <span class="btn-default-inner">
+                        <span data-hover="Submit Now">Submit Now</span>
+                      </span>
+                      <span class="btn-icon">
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </a>
+                  </div>
+                </article>
+
+                <!-- ================================================= -->
+                <!-- Pricing Plan 03 -->
+                <!-- ================================================= -->
+                <article class="pricing-vertical__item">
+                  <div class="pricing-vertical__header">
+                    <div class="pricing-vertical__title">Entreprise Plan</div>
+                    <h3>$45<span>/mo</span></h3>
+                  </div>
+
+                  <div class="pricing-vertical__body">
+                    <ul>
+                      <li>Up to 10 pages</li>
+                      <li>Advanced UI/UX + components</li>
+                      <li>Performance & accessibility pass</li>
+                      <li>Priority support + 3 revisions</li>
+                    </ul>
+                  </div>
+
+                  <div class="pricing-vertical__footer">
+                    <a
+                      class="btn-default btn-default--small-border-dark"
+                      href="contact.html"
+                      aria-label="Choose the Entreprise Plan"
+                    >
+                      <span class="btn-default-inner">
+                        <span data-hover="Submit Now">Submit Now</span>
+                      </span>
+                      <span class="btn-icon">
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <!-- /Pricing Cards Wrapper -->
+            </div>
+          </div>
+        </div>
+        <!-- /Container -->
+
+        <!-- Section Divider -->
+        <div class="section-separator"></div>
+      </section>
+      <!-- ===================================================== -->
+      <!-- Pricing Section End -->
+      <!-- ===================================================== -->
+
+      <!-- ===================================================== -->
+      <!-- Blog Section -->
+      <!-- Description: Displays latest blog articles in card layout -->
+      <!-- Features: Responsive cards, hover-ready structure, CTA link -->
+      <!-- Customize: Blog titles, images, dates, links -->
+      <!-- ===================================================== -->
+
+      <section class="blog">
+        <!-- ===================================== -->
+        <!-- Container Start -->
+        <!-- ===================================== -->
+        <div class="container">
+          <!-- ===================================== -->
+          <!-- Section Header -->
+          <!-- ===================================== -->
+          <div class="row">
+            <!-- Pre-title -->
+            <div class="col-lg-4">
+              <div class="pre-title">
+                <!-- Icon -->
+                <!-- Replace icon in: /images/branding/badges/ -->
+                <div class="pre-title__icon-wrap">
+                  <img
+                    class="pre-title__icon"
+                    src="images/branding/badges/title-shape-dark.svg"
+                    data-light-src="images/branding/badges/title-shape-dark.svg"
+                    data-dark-src="images/branding/badges/title-shape-light.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+
+                <!-- Label -->
+                <span class="pre-title__label">Blog</span>
+              </div>
+            </div>
+
+            <!-- Title -->
+            <div class="col-lg-8">
+              <div class="section-title">
+                <h2>
+                  <span class="cp-gray--modern">Web Design</span>
+                  Insights That Help You Grow
+                  <span class="cp-brand-color">.</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===================================== -->
+          <!-- Blog Cards -->
+          <!-- ===================================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <!-- Blog Items Wrapper -->
+              <div class="blog__items-wrapper">
+                <!-- ===================================================== -->
+                <!-- Blog Item 01 -->
+                <!-- ===================================================== -->
+                <article class="blog__item">
+                  <!-- Cover Image -->
+                  <!-- Replace images in: /images/sections/blog/ -->
+                  <figure class="blog__item-cover">
+                    <img
+                      src="images/sections/blog/blog-img-01.jpg"
+                      alt="Designing Websites That Actually Convert cover image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+
+                    <!-- Meta Date -->
+                    <div class="meta-label-wrapper">
+                      <div class="meta-label">
+                        <span
+                          class="meta-label__dot meta-label__dot--brand"
+                        ></span>
+                        <span class="meta-label__text">21 Jan 2026</span>
+                      </div>
+                    </div>
+                  </figure>
+
+                  <!-- Title -->
+                  <h3 class="blog__item-title">
+                    Designing Websites That Actually Convert
+                    <span class="cp-brand-color">.</span>
+                  </h3>
+
+                  <!-- Read More Link -->
+                  <div class="blog__link-wrapper">
+                    <a
+                      href="blog-details.html"
+                      class="link"
+                      aria-label="Read Designing Websites That Actually Convert article"
+                    >
+                      Read More
+                      <span class="link__icon-wrapper" aria-hidden="true">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </span>
+                    </a>
+                  </div>
+                </article>
+
+                <!-- ===================================================== -->
+                <!-- Blog Item 02 -->
+                <!-- ===================================================== -->
+                <article class="blog__item">
+                  <figure class="blog__item-cover">
+                    <img
+                      src="images/sections/blog/blog-img-02.jpg"
+                      alt="Why User Experience Matters More Than Ever cover image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+
+                    <div class="meta-label-wrapper">
+                      <div class="meta-label">
+                        <span
+                          class="meta-label__dot meta-label__dot--brand"
+                        ></span>
+                        <span class="meta-label__text">18 Jan 2026</span>
+                      </div>
+                    </div>
+                  </figure>
+
+                  <h3 class="blog__item-title">
+                    Why User Experience Matters More Than Ever
+                    <span class="cp-brand-color">.</span>
+                  </h3>
+
+                  <div class="blog__link-wrapper">
+                    <a
+                      href="blog-details.html"
+                      class="link"
+                      aria-label="Read Why User Experience Matters More Than Ever article"
+                    >
+                      Read More
+                      <span class="link__icon-wrapper" aria-hidden="true">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </span>
+                    </a>
+                  </div>
+                </article>
+
+                <!-- ===================================================== -->
+                <!-- Blog Item 03 -->
+                <!-- ===================================================== -->
+                <article class="blog__item">
+                  <figure class="blog__item-cover">
+                    <img
+                      src="images/sections/blog/blog-img-03.jpg"
+                      alt="From Concept to Launch: My Web Design Process cover image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+
+                    <div class="meta-label-wrapper">
+                      <div class="meta-label">
+                        <span
+                          class="meta-label__dot meta-label__dot--brand"
+                        ></span>
+                        <span class="meta-label__text">10 Jan 2026</span>
+                      </div>
+                    </div>
+                  </figure>
+
+                  <h3 class="blog__item-title">
+                    From Concept to Launch: My Web Design Process
+                    <span class="cp-brand-color">.</span>
+                  </h3>
+
+                  <div class="blog__link-wrapper">
+                    <a
+                      href="blog-details.html"
+                      class="link"
+                      aria-label="Read From Concept to Launch: My Web Design Process article"
+                    >
+                      Read More
+                      <span class="link__icon-wrapper" aria-hidden="true">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </span>
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <!-- /Blog Items Wrapper -->
+            </div>
+          </div>
+
+          <!-- ===================================== -->
+          <!-- Blog CTA -->
+          <!-- ===================================== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="blog__cta">
+                <!-- CTA Text -->
+                <p>
+                  We are dedicated to driving success through cutting-edge
+                  strategies
+                  <a href="blog-list.html" class="link">See All Articles</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================== -->
+        <!-- End Container -->
+        <!-- ===================================== -->
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- End Blog Section -->
+      <!-- ===================================================== -->
+    </main>
+
+    <!-- ===================================================== -->
+    <!-- Footer Section -->
+    <!-- Description: Main website footer with contact info, links, social icons, and contact form -->
+    <!-- Features: Responsive layout, contact form, social links, newsletter-style interaction -->
+    <!-- Backend: Form submits to /api/contact -->
+    <!-- Customize: Emails, phone, links, social URLs, branding -->
+    <!-- ===================================================== -->
+
+    <footer class="footer">
+      <!-- ===================================== -->
+      <!-- Container Start -->
+      <!-- ===================================== -->
+      <div class="container container-footer">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- ===================================== -->
+            <!-- Footer Title Section -->
+            <!-- ===================================== -->
+            <div class="footer__title-wrapper">
+              <!-- Main Heading -->
+              <h2>Let's <span class="brand-gradient">Have a Chat</span></h2>
+
+              <!-- Badge / Decorative Elements -->
+              <!-- Replace assets in: /images/sections/footer/ -->
+              <div class="footer__badge">
+                <img
+                  class="footer__badge-icon"
+                  src="images/sections/footer/footer-chat-dark.svg"
+                  data-light-src="images/sections/footer/footer-chat-dark.svg"
+                  data-dark-src="images/sections/footer/footer-chat-light.svg"
+                  alt="Chat icon"
+                />
+
+                <img
+                  class="footer__badge-img"
+                  src="images/sections/footer/footer-badge-dark.png"
+                  data-light-src="images/sections/footer/footer-badge-dark.png"
+                  data-dark-src="images/sections/footer/footer-badge-light.png"
+                  alt="Quality badge"
+                />
+              </div>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Footer Content Wrapper -->
+            <!-- ===================================== -->
+            <div class="footer__contact-wrapper">
+              <div class="row">
+                <!-- ===================================== -->
+                <!-- LEFT COLUMN: Contact / Links / Social -->
+                <!-- ===================================== -->
+                <div class="col-lg-6 col-md-12">
+                  <div class="footer__items-wrapper">
+                    <div class="footer__items-group">
+                      <!-- ========================= -->
+                      <!-- Contact Section -->
+                      <!-- ========================= -->
+                      <div class="footer__contact-item">
+                        <h3>Contact</h3>
+
+                        <div class="footer__contact-infos">
+                          <!-- Phone -->
+                          <div class="footer__contact-content">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <div class="footer__contact-info-wrapper">
+                              <p>Call Me</p>
+                              <a class="link" href="tel:+1234567890"
+                                >+1 (234) 567-890</a
+                              >
+                            </div>
+                          </div>
+
+                          <!-- Email -->
+                          <div class="footer__contact-content">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div class="footer__contact-info-wrapper">
+                              <p>Need Support</p>
+                              <a class="link" href="mailto:hello@mail.com"
+                                >hello@mail.com</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- ========================= -->
+                      <!-- Quick Links Section -->
+                      <!-- ========================= -->
+                      <div class="footer__contact-item">
+                        <h3>Quick Links</h3>
+
+                        <ul aria-label="Quick links">
+                          <li><a class="link" href="index.html">Home</a></li>
+                          <li><a class="link" href="about.html">About</a></li>
+                          <li>
+                            <a class="link" href="services-list.html"
+                              >Services</a
+                            >
+                          </li>
+                          <li>
+                            <a class="link" href="projects.html">Portfolio</a>
+                          </li>
+                          <li>
+                            <a class="link" href="contact.html">Contact</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- ========================= -->
+                    <!-- Social Links Section -->
+                    <!-- ========================= -->
+                    <div class="footer__social-wrapper">
+                      <div class="footer__contact-item">
+                        <div class="footer__social-container">
+                          <h3>Social</h3>
+
+                          <div class="footer__social-items">
+                            <a
+                              href="#"
+                              class="btn btn--social btn--social-lg"
+                              aria-label="Visit our Facebook page"
+                            >
+                              <i
+                                class="fab fa-facebook-f"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+
+                            <a
+                              href="#"
+                              class="btn btn--social btn--social-lg"
+                              aria-label="Visit our Twitter Profile"
+                            >
+                              <i
+                                class="fab fa-x-twitter"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+
+                            <a
+                              href="#"
+                              class="btn btn--social btn--social-lg"
+                              aria-label="Visit our LinkedIn Profile"
+                            >
+                              <i
+                                class="fab fa-linkedin-in"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+
+                            <a
+                              href="#"
+                              class="btn btn--social btn--social-lg"
+                              aria-label="Visit our Instagram Profile"
+                            >
+                              <i
+                                class="fab fa-instagram"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===================================== -->
+                <!-- RIGHT COLUMN: Contact Form -->
+                <!-- ===================================== -->
+                <div class="col-lg-6 col-md-12">
+                  <div class="footer__form-wrapper">
+                    <!-- Contact Form -->
+                    <!-- Backend: mail.php -->
+                    <form
+                      action="mail.php"
+                      method="POST"
+                      class="cp-form"
+                      accept-charset="UTF-8"
+                    >
+                      <h4 class="cp-form__title">Say Hi!</h4>
+
+                      <small class="cp-form__note">
+                        Fields with an asterisk (*) are required!
+                      </small>
+
+                      <!-- Honeypot -->
+                      <div class="cp-form-honeypot" aria-hidden="true">
+                        <label for="cp-company-name"
+                          >Leave this field empty</label
+                        >
+                        <input
+                          class="cp-form-control"
+                          id="cp-company-name"
+                          name="company_name"
+                          type="text"
+                          tabindex="-1"
+                          autocomplete="off"
+                        />
+                      </div>
+
+                      <!-- Name -->
+                      <div class="cp-form-group">
+                        <label for="cp-name">
+                          Name <span aria-hidden="true">*</span>
+                        </label>
+                        <input
+                          class="cp-form-control"
+                          id="cp-name"
+                          name="user_name"
+                          type="text"
+                          placeholder="your name"
+                          required
+                        />
+                      </div>
+
+                      <!-- Email -->
+                      <div class="cp-form-group">
+                        <label for="cp-email">
+                          Email <span aria-hidden="true">*</span>
+                        </label>
+                        <input
+                          class="cp-form-control"
+                          id="cp-email"
+                          name="user_email"
+                          type="email"
+                          placeholder="your email"
+                          required
+                        />
+                      </div>
+
+                      <!-- Message -->
+                      <div class="cp-form-group">
+                        <label for="cp-message">
+                          Message <span aria-hidden="true">*</span>
+                        </label>
+                        <textarea
+                          class="cp-form-control"
+                          id="cp-message"
+                          name="user_message"
+                          rows="6"
+                          placeholder="your message"
+                          required
+                        ></textarea>
+                      </div>
+
+                      <!-- Terms Checkbox -->
+                      <div class="cp-form-check">
+                        <input
+                          type="checkbox"
+                          id="checkBox"
+                          name="checkBox"
+                          required
+                          aria-describedby="terms-description"
+                        />
+
+                        <small id="terms-description" class="visually-hidden">
+                          You must accept the terms and conditions before
+                          submitting.
+                        </small>
+
+                        <label for="checkBox">
+                          I agree to the terms and conditions.
+                        </label>
+                      </div>
+
+                      <div class="cp-form-feedback" aria-live="polite"></div>
+
+                      <!-- Submit Button -->
+                      <button type="submit" class="btn-default btn--w-100">
+                        <span class="btn-default-inner">
+                          <span data-hover="Submit Now">Submit Now</span>
+                        </span>
+
+                        <span class="btn-icon">
+                          <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                          ></i>
+                        </span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Footer Copyright -->
+            <!-- ===================================== -->
+            <div class="footer__copyright">
+              <p>&copy; 2026 CodePower. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===================================================== -->
+    <!-- End Footer Section -->
+    <!-- ===================================================== -->
+
+    <!-- To Top Button Start -->
+    <a href="#" id="to-top" class="btn-to-top" aria-label="Back to top">
+      <i class="fa-solid fa-angle-up" aria-hidden="true"></i>
+    </a>
+    <!-- To Top Button End -->
+
+    <!-- Scripts -->
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <!-- GSAP JS -->
+    <script src="js/gsap.min.js" defer></script>
+    <!-- Lenis JS -->
+    <script src="js/lenis.min.js" defer></script>
+    <!-- SplitText JS -->
+    <script src="js/SplitText.min.js" defer></script>
+    <!-- ScrollTrigger JS -->
+    <script src="js/ScrollTrigger.min.js" defer></script>
+    <!-- CustomEase JS -->
+    <script src="js/CustomEase.min.js" defer></script>
+    <!-- Magic Cursor JS -->
+    <script src="js/magic-cursor.js" defer></script>
+    <!-- Nice Select JS -->
+    <script src="js/nice-select.js" defer></script>
+    <!-- Parallaxie JS -->
+    <script src="js/parallaxie.js" defer></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.js" defer></script>
+    <!-- Ukiyo JS -->
+    <script src="js/ukiyo.min.js" defer></script>
+    <!-- Magnific JS -->
+    <script src="js/jquery.magnific-popup.min.js" defer></script>
+
+    <script src="js/script.js" defer></script>
+  </body>
+
+</html>

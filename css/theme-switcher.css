@@ -1,0 +1,72 @@
+/* Theme Switcher Styles - Compact Single Button */
+
+/* Main button container */
+.theme-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 45px;
+  padding: 0 var(--cp-space-4);
+  border: 2px solid var(--cp-color-primary);
+  border-radius: var(--cp-radius-s);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 18px;
+  color: var(--cp-color-primary);
+  background-color: var(--cp-color-white);
+}
+
+/* Focus-visible state for accessibility */
+.theme-switcher:focus-visible {
+  outline: 2px solid var(--cp-color-primary);
+  outline-offset: 2px;
+}
+
+/* Active/pressed state */
+.theme-switcher:active {
+  transform: scale(0.95);
+}
+
+/* Icon container */
+.theme-switcher__icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.6);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+/* Sun icon - visible in light theme */
+.theme-switcher__icon--light {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+[data-theme="dark"] .theme-switcher__icon--light {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.6);
+}
+
+/* Moon icon - visible in dark theme */
+.theme-switcher__icon--dark {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.6);
+}
+
+[data-theme="dark"] .theme-switcher__icon--dark {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Hidden radio inputs for maintaining theme state */
+.theme-switcher__input {
+  display: none;
+}
